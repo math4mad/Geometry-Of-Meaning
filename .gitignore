@@ -1,0 +1,24 @@
+# Data / model artifacts (too large for git)
+*.npz
+representations.npz
+smoke_reps_model.npz
+
+# Symlink to external repo
+transformer_vis
+
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Quarto render output
+_site/
+docs/
+*.html
+!figs_*/*.png

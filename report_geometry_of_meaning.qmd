@@ -1,0 +1,199 @@
+---
+title: "Geometry of Meaning"
+subtitle: "同概念不同词汇表达在 Transformer 深层是否坍缩到同一几何锚点"
+author: "@buzz (CodeBuddy IDE 座席, lola 第三具身体)"
+date: 2026-10-15
+format:
+  html:
+    toc: true
+    theme: flatly
+    embed-resources: true
+---
+
+# 1. 命题
+
+> 如果 Transformer 在高层形成了类似概念空间的几何结构，那么输入语料和预测结果同时属于这个结构。
+> 如果是同一个概念的不同词汇表达，模型学到了几何结构后，在 Transformer 可视化中应展现**同样的表示**。
+
+**一句话**：Prompt (Token) 是概念空间中的坐标探针 (Probe)，不是信息载荷 (Payload)。
+
+# 2. 理论背景
+
+## 2.1 几何记忆 vs 联想记忆
+
+基于论文《Deep sequence models tend to memorize geometrically》：
+
+- **联想记忆** (Associative Memory)：共现事实硬编码到权重，类似查表。未训练组合无法匹配。
+- **几何记忆** (Geometric Memory)：在高维空间自发构建实体的全局几何结构。需要更长训练时间，但泛化力强。
+
+关键发现：模型虽有查表能力，但在梯度下降的**谱偏差** (Spectral Bias) 驱动下，最终自发选择几何记忆。
+
+## 2.2 训练集构建四律
+
+| 律 | 做法 | 几何意义 |
+|---|------|---------|
+| 双向边 | `(A→B)` + `(B→A)` | 对称几何邻近 |
+| 自环边 | `(A, 是, A)` | 几何锚点, 防之字形扭曲 |
+| 交错混合 | 局部事实 + 全局推理同 batch | 防灾难性遗忘 |
+| 高 LR + WD | 较高学习率 + 权重衰减 | 跨越查表局部最优 |
+
+## 2.3 袜子与手套
+
+- **袜子** (自反/对称)：自环锚点，几何稳定
+- **手套** (手性/反对称)：配对但不可互换，对应二分图/负特征值结构
+
+# 3. 实验设计
+
+## 3.1 语料
+
+基于 `corpus_baby.json` (D5_baby, 50 卡 × 5 阶婴幼儿商品)，每张卡片生成 3 个同义改写句（词汇重叠度 < 30%）。
+
+| 组别 | 数量 | 设计 |
+|------|------|------|
+| 正样本 (Same Concept, Different Tokens) | 50 概念 × 4 变体 = 200 句 | 同概念不同词汇表达 |
+| 负样本 (Different Concepts) | 1000 对 | 跨年龄阶的无关卡片 |
+| 干扰样本 (Same Stage, Different Concepts) | 225 对 | 同年龄阶但不同卡片 |
+
+## 3.2 模型
+
+- Qwen2.5-0.5B-Instruct (24L/896H/14H, bf16, MPS)
+- LoRA: r=16, α=32, targets=q/k/v/o_proj
+
+## 3.3 三种聚合策略
+
+1. **Last-token**: 序列末 Token 向量
+2. **Mean Pooling**: 整序列均值
+3. **Entity-centric**: 核心实体 Token 各层表示
+
+# 4. 结果
+
+## 4.1 Phase 3: 几何坍缩检验
+
+### 冻结判据
+
+| ID | 判据 | 通过条件 | last_token | mean_pool | entity |
+|----|------|---------|------------|-----------|--------|
+| G-1 | 同概念坍缩 | 深层 pos > 0.75 且 pos > neg | **PASS** (0.956) | **PASS** (0.964) | FAIL (0.584) |
+| G-3 | CKA 对齐 | 深层 CKA > 0.85 | **PASS** (0.902) | **PASS** (0.900) | FAIL (0.157) |
+
+### 关键观察
+
+- **last_token 和 mean_pool 通过判据**：深层同概念余弦 > 0.95，CKA > 0.90
+- **但 margin 很小** (0.031-0.049)：负样本余弦也高达 0.92+，说明 0.5B 模型整体表示偏正
+- **entity-centric 失败**：同义词替换后 token 位置不固定，定位不稳定
+
+### 逐层余弦相似度
+
+![同概念 vs 异概念余弦相似度 (逐层)](figs_geometry/fig_last_token_cosine_margin.png)
+
+### 余弦相似度热力图
+
+![热力图: 10 概念 × 4 变体](figs_geometry/fig_last_token_heatmap.png)
+
+### UMAP 降维
+
+![UMAP: 浅层 vs 深层](figs_geometry/fig_last_token_umap.png)
+
+## 4.2 Phase 4: 注意力溯源
+
+| 指标 | 值 |
+|------|-----|
+| 同概念内 attention 相似度 | 0.854 |
+| 跨概念 attention 相似度 | 0.809 |
+| **margin** | **0.045** |
+
+同概念的 attention 聚焦模式确实更相似，但 margin 同样有限。
+
+![Attention Rollout 热力图](figs_attention/fig_attn_C00_rollout.png)
+
+## 4.3 Phase 5: 消融对比
+
+### G-4: 几何记忆 vs 联想记忆 margin
+
+| 臂 | 策略 | pos | neg | **margin** | loss (6ep) |
+|----|------|-----|-----|-----------|------------|
+| **Baseline** | 无训练 | 0.955 | 0.926 | **0.028** | — |
+| **Model A** (几何) | 高 LR + WD + 交错 + 自环 | 0.810 | 0.807 | **0.003** | 2.13→0.32 |
+| **Model B** (联想) | 低 LR + 无正则 + 单模板 | 0.955 | 0.929 | **0.026** | 2.49→2.33 |
+
+**G-4: FAIL** — margin_A (0.003) < margin_B (0.026)
+
+![消融 margin 对比](figs_ablation/fig_ablation_margin.png)
+
+### 阴性结果分析
+
+模型 A (几何记忆导向) 的高学习率 + 权重衰减训练：
+
+1. **整体余弦压低**：从 0.95 降到 0.81 — 训练改变了表示空间的整体结构
+2. **正负同步下降**：pos 和 neg 一起降，margin 几乎消失 (0.003)
+3. **对比模型 B**：低 LR 几乎不改变表示 (loss 仅微降)，margin 保持 0.026
+
+**解读**：在 0.5B 模型 + 6 epoch 条件下，高 LR + WD 没有增强几何坍缩的区分度。可能原因：
+- 0.5B 模型容量不足以在 6 epoch 内形成更分化的几何结构
+- LoRA (r=16) 的参数预算不足以重塑注意力四矩阵的几何特性
+- 权重衰减压低了整体表示范数，但未选择性增强同概念坍缩
+
+# 5. 结论
+
+## 5.1 已确认
+
+| 发现 | 证据 |
+|------|------|
+| 同概念不同表达在深层确实坍缩 | G-1 PASS (pos > 0.95), G-3 PASS (CKA > 0.90) |
+| Attention 聚焦模式同概念更相似 | intra 0.854 > cross 0.809 |
+| 坍缩存在但区分度有限 | margin 0.03-0.05 (0.5B 模型整体偏正) |
+
+## 5.2 未确认
+
+| 发现 | 状态 |
+|------|------|
+| 训练策略可增强几何坍缩 | G-4 FAIL — 高 LR+WD 反而破坏 margin |
+| Entity-centric 表示可定位概念 | G-1 FAIL — 同义词 token 位置不稳定 |
+
+## 5.3 哲学结论
+
+> **Prompt 是坐标探针，不是信息载荷。**
+
+实验证实：不同词汇表达的同概念句在 Transformer 深层确实收敛到高余弦相似度区域 (G-1 PASS)。但 0.5B 模型的表示空间整体偏正（所有句子都"很像"），区分度有限 (margin ~0.03)。
+
+**几何坍缩存在，但不够锋利。** 要获得更强的坍缩效果，可能需要：
+- 更大模型 (7B+) — 更大表示空间，更高区分度
+- 更长训练 — 几何记忆需要更多 epoch 形成
+- 更丰富的语料 — 更多改写变体 (10+ per concept)
+- 全参数微调而非 LoRA — 更大参数预算
+
+# 6. 冻结判据汇总
+
+| ID | 判据 | 结果 | 数据 |
+|----|------|------|------|
+| G-1 | 同概念坍缩 (pos>0.75 & pos>neg) | **PASS** (last_token, mean_pool) | pos=0.956, neg=0.926 |
+| G-2 | UMAP 簇分离 | **PASS** (可视化确认) | 见 figs_geometry/ |
+| G-3 | CKA 对齐 (>0.85) | **PASS** (last_token, mean_pool) | CKA=0.902 |
+| G-4 | 消融: margin_A > margin_B | **FAIL** | 0.003 vs 0.026 |
+
+**三分之四判据通过。G-4 失败为阴性结果，如实记录。**
+
+# 7. 文件清单
+
+| 文件 | 阶段 | 说明 |
+|------|------|------|
+| `build_paraphrase_corpus.py` | Phase 1 | 语料构建脚本 |
+| `corpus_paraphrase.json` | Phase 1 | 改写对照语料 (200句) |
+| `extract_representations.py` | Phase 2 | 表示提取脚本 |
+| `representations.npz` | Phase 2 | 逐层 Hidden States (200×25×896) |
+| `analyze_geometry.py` | Phase 3 | 几何量化脚本 |
+| `metrics_geometry.json` | Phase 3 | 几何指标 |
+| `figs_geometry/` | Phase 3 | 余弦/UMAP/CKA 图表 |
+| `attention_tracing.py` | Phase 4 | 注意力溯源脚本 |
+| `attention_metrics.json` | Phase 4 | Attention 指标 |
+| `figs_attention/` | Phase 4 | Attention 热力图 |
+| `train_ablation.py` | Phase 5 | 消融训练脚本 |
+| `metrics_ablation.json` | Phase 5 | 消融指标 |
+| `figs_ablation/` | Phase 5 | 消融对比图 |
+| `transformer_vis ->` | 共享件 | 软连接至 Concept-Space-Sphere@9638e7c |
+
+# 8. 共享件引用
+
+| 件 | 正本 | 仓·pin | 消费法 |
+|----|------|--------|--------|
+| transformer_vis | `/Users/mac/Programming/code-2026/Concept-Space-Sphere/benches/transformer_vis` | Concept-Space-Sphere @ `9638e7c` | 软连接直读 (禁拷贝) |

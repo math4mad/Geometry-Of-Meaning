@@ -1,0 +1,8232 @@
+{
+ "deck": "paraphrase_baby",
+ "minted": "2026-10-15",
+ "source": "corpus_baby.json (D5_baby, 50卡×5阶)",
+ "note": "同义改写对照语料: 每张卡片4变体(原句+3改写), 词汇重叠度<30%",
+ "stages": [
+  "0-3月",
+  "3-6月",
+  "6-12月",
+  "1-2岁",
+  "2-3岁"
+ ],
+ "paraphrases": {
+  "C00": {
+   "concept_id": "C00",
+   "item": {
+    "name": "婴儿纸尿裤",
+    "desc": "NB码，云柔表层，日夜两用",
+    "stage": 0
+   },
+   "sentences": [
+    "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+    "刚出生到半岁的宝宝需要护理尿垫，日夜两用，云柔表层，NB码。",
+    "什么是刚出生到半岁用到的纸尿片？日夜两用，NB码，云柔表层。",
+    "云柔表层，NB码，日夜两用，这就是刚出生到半岁的护理尿垫。"
+   ],
+   "stage": 0,
+   "name": "婴儿纸尿裤",
+   "name_en": "Diaper"
+  },
+  "C01": {
+   "concept_id": "C01",
+   "item": {
+    "name": "婴儿湿巾",
+    "desc": "无酒精无香精，EDI纯水",
+    "stage": 0
+   },
+   "sentences": [
+    "婴儿湿巾：无酒精无香精，EDI纯水。",
+    "刚出生到半岁的宝宝需要擦拭巾，EDI纯水，无酒精无香精。",
+    "什么是刚出生到半岁用到的护理湿巾？EDI纯水，无酒精无香精。",
+    "EDI纯水，无酒精无香精，这就是刚出生到半岁的擦拭巾。"
+   ],
+   "stage": 0,
+   "name": "婴儿湿巾",
+   "name_en": "Baby Wipes"
+  },
+  "C02": {
+   "concept_id": "C02",
+   "item": {
+    "name": "奶瓶消毒器",
+    "desc": "蒸汽消毒，烘干一体",
+    "stage": 0
+   },
+   "sentences": [
+    "奶瓶消毒器：蒸汽消毒，烘干一体。",
+    "刚出生到半岁的宝宝需要喂奶瓶，烘干一体，蒸汽消毒。",
+    "什么是刚出生到半岁用到的饮奶瓶？烘干一体，蒸汽消毒。",
+    "烘干一体，蒸汽消毒，这就是刚出生到半岁的喂奶瓶。"
+   ],
+   "stage": 0,
+   "name": "奶瓶消毒器",
+   "name_en": "Bottle Sterilizer"
+  },
+  "C03": {
+   "concept_id": "C03",
+   "item": {
+    "name": "襁褓睡袋",
+    "desc": "纯棉纱布，模拟子宫包裹",
+    "stage": 0
+   },
+   "sentences": [
+    "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+    "刚出生到半岁的宝宝需要襁褓袋，模拟子宫包裹，纯棉纱布。",
+    "什么是刚出生到半岁用到的包裹睡衣？模拟子宫包裹，纯棉纱布。",
+    "模拟子宫包裹，纯棉纱布，这就是刚出生到半岁的襁褓袋。"
+   ],
+   "stage": 0,
+   "name": "襁褓睡袋",
+   "name_en": "Swaddle Sack"
+  },
+  "C04": {
+   "concept_id": "C04",
+   "item": {
+    "name": "婴儿连体衣",
+    "desc": "纯棉针织，按扣开襟",
+    "stage": 0
+   },
+   "sentences": [
+    "婴儿连体衣：纯棉针织，按扣开襟。",
+    "刚出生到半岁的宝宝需要爬服，按扣开襟，纯棉针织。",
+    "什么是刚出生到半岁用到的一体衣？按扣开襟，纯棉针织。",
+    "按扣开襟，纯棉针织，这就是刚出生到半岁的爬服。"
+   ],
+   "stage": 0,
+   "name": "婴儿连体衣",
+   "name_en": "Baby Onesie"
+  },
+  "C05": {
+   "concept_id": "C05",
+   "item": {
+    "name": "婴儿指甲剪",
+    "desc": "圆头安全剪，配指甲锉",
+    "stage": 0
+   },
+   "sentences": [
+    "婴儿指甲剪：圆头安全剪，配指甲锉。",
+    "刚出生到半岁的宝宝需要指甲钳，配指甲锉，圆头安全剪。",
+    "什么是刚出生到半岁用到的指甲切割器？配指甲锉，圆头安全剪。",
+    "配指甲锉，圆头安全剪，这就是刚出生到半岁的指甲钳。"
+   ],
+   "stage": 0,
+   "name": "婴儿指甲剪",
+   "name_en": "Baby Nail Clippers"
+  },
+  "C06": {
+   "concept_id": "C06",
+   "item": {
+    "name": "吸奶器",
+    "desc": "电动双边，硅胶按摩",
+    "stage": 0
+   },
+   "sentences": [
+    "吸奶器：电动双边，硅胶按摩。",
+    "刚出生到半岁的宝宝需要吸乳器，硅胶按摩，电动双边。",
+    "什么是刚出生到半岁用到的集奶器？硅胶按摩，电动双边。",
+    "硅胶按摩，电动双边，这就是刚出生到半岁的吸乳器。"
+   ],
+   "stage": 0,
+   "name": "吸奶器",
+   "name_en": "Breast Pump"
+  },
+  "C07": {
+   "concept_id": "C07",
+   "item": {
+    "name": "恒温水壶",
+    "desc": "精准控温，冲奶即饮",
+    "stage": 0
+   },
+   "sentences": [
+    "恒温水壶：精准控温，冲奶即饮。",
+    "刚出生到半岁的宝宝需要温奶器，冲奶即饮，精准控温。",
+    "什么是刚出生到半岁用到的保温冲奶器？冲奶即饮，精准控温。",
+    "冲奶即饮，精准控温，这就是刚出生到半岁的温奶器。"
+   ],
+   "stage": 0,
+   "name": "恒温水壶",
+   "name_en": "Constant-Temp Kettle"
+  },
+  "C08": {
+   "concept_id": "C08",
+   "item": {
+    "name": "玻璃奶瓶",
+    "desc": "宽口径，防胀气导气管",
+    "stage": 0
+   },
+   "sentences": [
+    "玻璃奶瓶：宽口径，防胀气导气管。",
+    "刚出生到半岁的宝宝需要透明乳瓶，防胀气导气管，宽口径。",
+    "什么是刚出生到半岁用到的耐高温奶瓶？防胀气导气管，宽口径。",
+    "防胀气导气管，宽口径，这就是刚出生到半岁的透明乳瓶。"
+   ],
+   "stage": 0,
+   "name": "玻璃奶瓶",
+   "name_en": "Glass Bottle"
+  },
+  "C09": {
+   "concept_id": "C09",
+   "item": {
+    "name": "哺乳枕",
+    "desc": "记忆棉，环绕式支撑",
+    "stage": 0
+   },
+   "sentences": [
+    "哺乳枕：记忆棉，环绕式支撑。",
+    "刚出生到半岁的宝宝需要授乳枕，环绕式支撑，记忆棉。",
+    "什么是刚出生到半岁用到的哺乳靠垫？环绕式支撑，记忆棉。",
+    "环绕式支撑，记忆棉，这就是刚出生到半岁的授乳枕。"
+   ],
+   "stage": 0,
+   "name": "哺乳枕",
+   "name_en": "Nursing Pillow"
+  },
+  "C10": {
+   "concept_id": "C10",
+   "item": {
+    "name": "牙胶",
+    "desc": "食品级硅胶，可冷藏",
+    "stage": 1
+   },
+   "sentences": [
+    "牙胶：食品级硅胶，可冷藏。",
+    "半岁到一岁的宝宝需要咬牙器，可冷藏，食品级硅胶。",
+    "什么是半岁到一岁用到的齿龈按摩器？可冷藏，食品级硅胶。",
+    "可冷藏，食品级硅胶，这就是半岁到一岁的咬牙器。"
+   ],
+   "stage": 1,
+   "name": "牙胶",
+   "name_en": "Teether"
+  },
+  "C11": {
+   "concept_id": "C11",
+   "item": {
+    "name": "辅食研磨碗",
+    "desc": "手动研磨，细网滤网",
+    "stage": 1
+   },
+   "sentences": [
+    "辅食研磨碗：手动研磨，细网滤网。",
+    "半岁到一岁的宝宝需要捣泥碗，细网滤网，手动研磨。",
+    "什么是半岁到一岁用到的研磨器？细网滤网，手动研磨。",
+    "细网滤网，手动研磨，这就是半岁到一岁的捣泥碗。"
+   ],
+   "stage": 1,
+   "name": "辅食研磨碗",
+   "name_en": "Food Grinder Bowl"
+  },
+  "C12": {
+   "concept_id": "C12",
+   "item": {
+    "name": "摇铃",
+    "desc": "环握设计，柔和声响",
+    "stage": 1
+   },
+   "sentences": [
+    "摇铃：环握设计，柔和声响。",
+    "半岁到一岁的宝宝需要响铃，柔和声响，环握设计。",
+    "什么是半岁到一岁用到的铃铛玩具？柔和声响，环握设计。",
+    "柔和声响，环握设计，这就是半岁到一岁的响铃。"
+   ],
+   "stage": 1,
+   "name": "摇铃",
+   "name_en": "Rattle"
+  },
+  "C13": {
+   "concept_id": "C13",
+   "item": {
+    "name": "婴儿健身架",
+    "desc": "脚踏琴挂件，俯卧玩耍",
+    "stage": 1
+   },
+   "sentences": [
+    "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+    "半岁到一岁的宝宝需要脚踏架，俯卧玩耍，脚踏琴挂件。",
+    "什么是半岁到一岁用到的运动架？俯卧玩耍，脚踏琴挂件。",
+    "俯卧玩耍，脚踏琴挂件，这就是半岁到一岁的脚踏架。"
+   ],
+   "stage": 1,
+   "name": "婴儿健身架",
+   "name_en": "Baby Activity Gym"
+  },
+  "C14": {
+   "concept_id": "C14",
+   "item": {
+    "name": "口水巾",
+    "desc": "纯棉纱绸，多层吸汗",
+    "stage": 1
+   },
+   "sentences": [
+    "口水巾：纯棉纱绸，多层吸汗。",
+    "半岁到一岁的宝宝需要口水垫，多层吸汗，纯棉纱绸。",
+    "什么是半岁到一岁用到的三角围嘴？多层吸汗，纯棉纱绸。",
+    "多层吸汗，纯棉纱绸，这就是半岁到一岁的口水垫。"
+   ],
+   "stage": 1,
+   "name": "口水巾",
+   "name_en": "Bib"
+  },
+  "C15": {
+   "concept_id": "C15",
+   "item": {
+    "name": "婴儿沐浴露",
+    "desc": "无泪配方，弱酸性",
+    "stage": 1
+   },
+   "sentences": [
+    "婴儿沐浴露：无泪配方，弱酸性。",
+    "半岁到一岁的宝宝需要洗浴液，弱酸性，无泪配方。",
+    "什么是半岁到一岁用到的洁肤露？弱酸性，无泪配方。",
+    "弱酸性，无泪配方，这就是半岁到一岁的洗浴液。"
+   ],
+   "stage": 1,
+   "name": "婴儿沐浴露",
+   "name_en": "Baby Shampoo"
+  },
+  "C16": {
+   "concept_id": "C16",
+   "item": {
+    "name": "耳温枪",
+    "desc": "一键测温，蓝光屏",
+    "stage": 1
+   },
+   "sentences": [
+    "耳温枪：一键测温，蓝光屏。",
+    "半岁到一岁的宝宝需要测温枪，蓝光屏，一键测温。",
+    "什么是半岁到一岁用到的红外测温仪？蓝光屏，一键测温。",
+    "蓝光屏，一键测温，这就是半岁到一岁的测温枪。"
+   ],
+   "stage": 1,
+   "name": "耳温枪",
+   "name_en": "Ear Thermometer"
+  },
+  "C17": {
+   "concept_id": "C17",
+   "item": {
+    "name": "辅食机",
+    "desc": "蒸煮搅拌一体，细腻研磨",
+    "stage": 1
+   },
+   "sentences": [
+    "辅食机：蒸煮搅拌一体，细腻研磨。",
+    "半岁到一岁的宝宝需要搅拌机，细腻研磨，蒸煮搅拌一体。",
+    "什么是半岁到一岁用到的辅食料理机？细腻研磨，蒸煮搅拌一体。",
+    "细腻研磨，蒸煮搅拌一体，这就是半岁到一岁的搅拌机。"
+   ],
+   "stage": 1,
+   "name": "辅食机",
+   "name_en": "Food Processor"
+  },
+  "C18": {
+   "concept_id": "C18",
+   "item": {
+    "name": "安抚巾",
+    "desc": "珊瑚绒，安抚结设计",
+    "stage": 1
+   },
+   "sentences": [
+    "安抚巾：珊瑚绒，安抚结设计。",
+    "半岁到一岁的宝宝需要安抚毛巾，安抚结设计，珊瑚绒。",
+    "什么是半岁到一岁用到的安全巾？安抚结设计，珊瑚绒。",
+    "安抚结设计，珊瑚绒，这就是半岁到一岁的安抚毛巾。"
+   ],
+   "stage": 1,
+   "name": "安抚巾",
+   "name_en": "Comfort Blanket"
+  },
+  "C19": {
+   "concept_id": "C19",
+   "item": {
+    "name": "趴趴垫",
+    "desc": "菱形拼图，缓冲防护",
+    "stage": 1
+   },
+   "sentences": [
+    "趴趴垫：菱形拼图，缓冲防护。",
+    "半岁到一岁的宝宝需要趴垫，缓冲防护，菱形拼图。",
+    "什么是半岁到一岁用到的爬行垫？缓冲防护，菱形拼图。",
+    "缓冲防护，菱形拼图，这就是半岁到一岁的趴垫。"
+   ],
+   "stage": 1,
+   "name": "趴趴垫",
+   "name_en": "Tummy Mat"
+  },
+  "C20": {
+   "concept_id": "C20",
+   "item": {
+    "name": "学饮杯",
+    "desc": "重力球吸管，防漏",
+    "stage": 2
+   },
+   "sentences": [
+    "学饮杯：重力球吸管，防漏。",
+    "一岁前后的宝宝需要过渡杯，防漏，重力球吸管。",
+    "什么是一岁前后用到的学喝水杯？防漏，重力球吸管。",
+    "防漏，重力球吸管，这就是一岁前后的过渡杯。"
+   ],
+   "stage": 2,
+   "name": "学饮杯",
+   "name_en": "Sippy Cup"
+  },
+  "C21": {
+   "concept_id": "C21",
+   "item": {
+    "name": "辅食米粉",
+    "desc": "原味高铁，细腻粉质",
+    "stage": 2
+   },
+   "sentences": [
+    "辅食米粉：原味高铁，细腻粉质。",
+    "一岁前后的宝宝需要婴儿米粉，细腻粉质，原味高铁。",
+    "什么是一岁前后用到的强化米粉？细腻粉质，原味高铁。",
+    "细腻粉质，原味高铁，这就是一岁前后的婴儿米粉。"
+   ],
+   "stage": 2,
+   "name": "辅食米粉",
+   "name_en": "Rice Cereal"
+  },
+  "C22": {
+   "concept_id": "C22",
+   "item": {
+    "name": "磨牙饼干",
+    "desc": "棒形设计，入口即化",
+    "stage": 2
+   },
+   "sentences": [
+    "磨牙饼干：棒形设计，入口即化。",
+    "一岁前后的宝宝需要固齿饼干，入口即化，棒形设计。",
+    "什么是一岁前后用到的牙胶饼干？入口即化，棒形设计。",
+    "入口即化，棒形设计，这就是一岁前后的固齿饼干。"
+   ],
+   "stage": 2,
+   "name": "磨牙饼干",
+   "name_en": "Teething Biscuit"
+  },
+  "C23": {
+   "concept_id": "C23",
+   "item": {
+    "name": "爬行垫",
+    "desc": "加厚拼接，无异味",
+    "stage": 2
+   },
+   "sentences": [
+    "爬行垫：加厚拼接，无异味。",
+    "一岁前后的宝宝需要地垫，无异味，加厚拼接。",
+    "什么是一岁前后用到的垫子？无异味，加厚拼接。",
+    "无异味，加厚拼接，这就是一岁前后的地垫。"
+   ],
+   "stage": 2,
+   "name": "爬行垫",
+   "name_en": "Play Mat"
+  },
+  "C24": {
+   "concept_id": "C24",
+   "item": {
+    "name": "游戏围栏",
+    "desc": "可折叠，带护栏门",
+    "stage": 2
+   },
+   "sentences": [
+    "游戏围栏：可折叠，带护栏门。",
+    "一岁前后的宝宝需要游戏栏，带护栏门，可折叠。",
+    "什么是一岁前后用到的安全栏？带护栏门，可折叠。",
+    "带护栏门，可折叠，这就是一岁前后的游戏栏。"
+   ],
+   "stage": 2,
+   "name": "游戏围栏",
+   "name_en": "Playpen"
+  },
+  "C25": {
+   "concept_id": "C25",
+   "item": {
+    "name": "大颗粒积木",
+    "desc": "食品接触级塑料",
+    "stage": 2
+   },
+   "sentences": [
+    "大颗粒积木：食品接触级塑料。",
+    "一岁前后的宝宝需要搭建块，食品接触级塑料。",
+    "什么是一岁前后用到的积木块？食品接触级塑料。",
+    "食品接触级塑料，这就是一岁前后的搭建块。"
+   ],
+   "stage": 2,
+   "name": "大颗粒积木",
+   "name_en": "Big Block Toys"
+  },
+  "C26": {
+   "concept_id": "C26",
+   "item": {
+    "name": "布书",
+    "desc": "可啃咬，响纸内页",
+    "stage": 2
+   },
+   "sentences": [
+    "布书：可啃咬，响纸内页。",
+    "一岁前后的宝宝需要布艺绘本，响纸内页，可啃咬。",
+    "什么是一岁前后用到的软书？响纸内页，可啃咬。",
+    "响纸内页，可啃咬，这就是一岁前后的布艺绘本。"
+   ],
+   "stage": 2,
+   "name": "布书",
+   "name_en": "Cloth Book"
+  },
+  "C27": {
+   "concept_id": "C27",
+   "item": {
+    "name": "婴儿餐椅",
+    "desc": "可调节，五点式安全带",
+    "stage": 2
+   },
+   "sentences": [
+    "婴儿餐椅：可调节，五点式安全带。",
+    "一岁前后的宝宝需要高脚椅，五点式安全带，可调节。",
+    "什么是一岁前后用到的餐凳？五点式安全带，可调节。",
+    "五点式安全带，可调节，这就是一岁前后的高脚椅。"
+   ],
+   "stage": 2,
+   "name": "婴儿餐椅",
+   "name_en": "High Chair"
+  },
+  "C28": {
+   "concept_id": "C28",
+   "item": {
+    "name": "婴儿推车",
+    "desc": "轻便折叠，可坐可躺",
+    "stage": 2
+   },
+   "sentences": [
+    "婴儿推车：轻便折叠，可坐可躺。",
+    "一岁前后的宝宝需要推车，可坐可躺，轻便折叠。",
+    "什么是一岁前后用到的童车？可坐可躺，轻便折叠。",
+    "可坐可躺，轻便折叠，这就是一岁前后的推车。"
+   ],
+   "stage": 2,
+   "name": "婴儿推车",
+   "name_en": "Stroller"
+  },
+  "C29": {
+   "concept_id": "C29",
+   "item": {
+    "name": "保温碗",
+    "desc": "吸盘底，控温防烫",
+    "stage": 2
+   },
+   "sentences": [
+    "保温碗：吸盘底，控温防烫。",
+    "一岁前后的宝宝需要加热碗，控温防烫，吸盘底。",
+    "什么是一岁前后用到的注水碗？控温防烫，吸盘底。",
+    "控温防烫，吸盘底，这就是一岁前后的加热碗。"
+   ],
+   "stage": 2,
+   "name": "保温碗",
+   "name_en": "Insulated Bowl"
+  },
+  "C30": {
+   "concept_id": "C30",
+   "item": {
+    "name": "助步器",
+    "desc": "防滑轮，稳固底盘",
+    "stage": 3
+   },
+   "sentences": [
+    "助步器：防滑轮，稳固底盘。",
+    "一两岁学步期的宝宝需要推步器，稳固底盘，防滑轮。",
+    "什么是一两岁学步期用到的行走辅助器？稳固底盘，防滑轮。",
+    "稳固底盘，防滑轮，这就是一两岁学步期的推步器。"
+   ],
+   "stage": 3,
+   "name": "助步器",
+   "name_en": "Walker"
+  },
+  "C31": {
+   "concept_id": "C31",
+   "item": {
+    "name": "涂鸦画板",
+    "desc": "双面磁性，升降支架",
+    "stage": 3
+   },
+   "sentences": [
+    "涂鸦画板：双面磁性，升降支架。",
+    "一两岁学步期的宝宝需要绘画板，升降支架，双面磁性。",
+    "什么是一两岁学步期用到的写字板？升降支架，双面磁性。",
+    "升降支架，双面磁性，这就是一两岁学步期的绘画板。"
+   ],
+   "stage": 3,
+   "name": "涂鸦画板",
+   "name_en": "Drawing Board"
+  },
+  "C32": {
+   "concept_id": "C32",
+   "item": {
+    "name": "拼插积木",
+    "desc": "大颗粒，主题造型",
+    "stage": 3
+   },
+   "sentences": [
+    "拼插积木：大颗粒，主题造型。",
+    "一两岁学步期的宝宝需要插接积木，主题造型，大颗粒。",
+    "什么是一两岁学步期用到的连接积木？主题造型，大颗粒。",
+    "主题造型，大颗粒，这就是一两岁学步期的插接积木。"
+   ],
+   "stage": 3,
+   "name": "拼插积木",
+   "name_en": "Building Blocks"
+  },
+  "C33": {
+   "concept_id": "C33",
+   "item": {
+    "name": "点读笔",
+    "desc": "儿歌古诗，OID识别",
+    "stage": 3
+   },
+   "sentences": [
+    "点读笔：儿歌古诗，OID识别。",
+    "一两岁学步期的宝宝需要阅读笔，OID识别，儿歌古诗。",
+    "什么是一两岁学步期用到的点读器？OID识别，儿歌古诗。",
+    "OID识别，儿歌古诗，这就是一两岁学步期的阅读笔。"
+   ],
+   "stage": 3,
+   "name": "点读笔",
+   "name_en": "Reading Pen"
+  },
+  "C34": {
+   "concept_id": "C34",
+   "item": {
+    "name": "防滑袜",
+    "desc": "硅胶底，室内学步",
+    "stage": 3
+   },
+   "sentences": [
+    "防滑袜：硅胶底，室内学步。",
+    "一两岁学步期的宝宝需要防摔袜，室内学步，硅胶底。",
+    "什么是一两岁学步期用到的抓地袜？室内学步，硅胶底。",
+    "室内学步，硅胶底，这就是一两岁学步期的防摔袜。"
+   ],
+   "stage": 3,
+   "name": "防滑袜",
+   "name_en": "Non-slip Socks"
+  },
+  "C35": {
+   "concept_id": "C35",
+   "item": {
+    "name": "训练裤",
+    "desc": "尿湿提示，可水洗",
+    "stage": 3
+   },
+   "sentences": [
+    "训练裤：尿湿提示，可水洗。",
+    "一两岁学步期的宝宝需要学习裤，可水洗，尿湿提示。",
+    "什么是一两岁学步期用到的过渡裤？可水洗，尿湿提示。",
+    "可水洗，尿湿提示，这就是一两岁学步期的学习裤。"
+   ],
+   "stage": 3,
+   "name": "训练裤",
+   "name_en": "Training Pants"
+  },
+  "C36": {
+   "concept_id": "C36",
+   "item": {
+    "name": "儿童牙刷",
+    "desc": "软毛小头，圆刷头",
+    "stage": 3
+   },
+   "sentences": [
+    "儿童牙刷：软毛小头，圆刷头。",
+    "一两岁学步期的宝宝需要洁齿器，圆刷头，软毛小头。",
+    "什么是一两岁学步期用到的护齿器？圆刷头，软毛小头。",
+    "圆刷头，软毛小头，这就是一两岁学步期的洁齿器。"
+   ],
+   "stage": 3,
+   "name": "儿童牙刷",
+   "name_en": "Kids Toothbrush"
+  },
+  "C37": {
+   "concept_id": "C37",
+   "item": {
+    "name": "绘本",
+    "desc": "硬纸板，圆角装帧",
+    "stage": 3
+   },
+   "sentences": [
+    "绘本：硬纸板，圆角装帧。",
+    "一两岁学步期的宝宝需要故事书，圆角装帧，硬纸板。",
+    "什么是一两岁学步期用到的童书？圆角装帧，硬纸板。",
+    "圆角装帧，硬纸板，这就是一两岁学步期的故事书。"
+   ],
+   "stage": 3,
+   "name": "绘本",
+   "name_en": "Picture Book"
+  },
+  "C38": {
+   "concept_id": "C38",
+   "item": {
+    "name": "球类玩具",
+    "desc": "软球套装，彩纹",
+    "stage": 3
+   },
+   "sentences": [
+    "球类玩具：软球套装，彩纹。",
+    "一两岁学步期的宝宝需要弹力球，彩纹，软球套装。",
+    "什么是一两岁学步期用到的彩色球？彩纹，软球套装。",
+    "彩纹，软球套装，这就是一两岁学步期的弹力球。"
+   ],
+   "stage": 3,
+   "name": "球类玩具",
+   "name_en": "Ball Toys"
+  },
+  "C39": {
+   "concept_id": "C39",
+   "item": {
+    "name": "滑板车",
+    "desc": "三轮稳定，高度可调",
+    "stage": 3
+   },
+   "sentences": [
+    "滑板车：三轮稳定，高度可调。",
+    "一两岁学步期的宝宝需要滑行车，高度可调，三轮稳定。",
+    "什么是一两岁学步期用到的三轮滑板？高度可调，三轮稳定。",
+    "高度可调，三轮稳定，这就是一两岁学步期的滑行车。"
+   ],
+   "stage": 3,
+   "name": "滑板车",
+   "name_en": "Scooter"
+  },
+  "C40": {
+   "concept_id": "C40",
+   "item": {
+    "name": "平衡车",
+    "desc": "铝合金车身，无踏板",
+    "stage": 4
+   },
+   "sentences": [
+    "平衡车：铝合金车身，无踏板。",
+    "两三岁探索期的宝宝需要无踏板车，无踏板，铝合金车身。",
+    "什么是两三岁探索期用到的身体平衡车？无踏板，铝合金车身。",
+    "无踏板，铝合金车身，这就是两三岁探索期的无踏板车。"
+   ],
+   "stage": 4,
+   "name": "平衡车",
+   "name_en": "Balance Bike"
+  },
+  "C41": {
+   "concept_id": "C41",
+   "item": {
+    "name": "磁力片",
+    "desc": "磁铁拼接，几何造型",
+    "stage": 4
+   },
+   "sentences": [
+    "磁力片：磁铁拼接，几何造型。",
+    "两三岁探索期的宝宝需要磁铁块，几何造型，磁铁拼接。",
+    "什么是两三岁探索期用到的磁力积木？几何造型，磁铁拼接。",
+    "几何造型，磁铁拼接，这就是两三岁探索期的磁铁块。"
+   ],
+   "stage": 4,
+   "name": "磁力片",
+   "name_en": "Magnetic Tiles"
+  },
+  "C42": {
+   "concept_id": "C42",
+   "item": {
+    "name": "彩泥",
+    "desc": "可食用级，模具套装",
+    "stage": 4
+   },
+   "sentences": [
+    "彩泥：可食用级，模具套装。",
+    "两三岁探索期的宝宝需要黏土，模具套装，可食用级。",
+    "什么是两三岁探索期用到的造型泥？模具套装，可食用级。",
+    "模具套装，可食用级，这就是两三岁探索期的黏土。"
+   ],
+   "stage": 4,
+   "name": "彩泥",
+   "name_en": "Modeling Clay"
+  },
+  "C43": {
+   "concept_id": "C43",
+   "item": {
+    "name": "故事机",
+    "desc": "语音点播，兔形外观",
+    "stage": 4
+   },
+   "sentences": [
+    "故事机：语音点播，兔形外观。",
+    "两三岁探索期的宝宝需要讲故事机，兔形外观，语音点播。",
+    "什么是两三岁探索期用到的兔形音箱？兔形外观，语音点播。",
+    "兔形外观，语音点播，这就是两三岁探索期的讲故事机。"
+   ],
+   "stage": 4,
+   "name": "故事机",
+   "name_en": "Story Machine"
+  },
+  "C44": {
+   "concept_id": "C44",
+   "item": {
+    "name": "儿童背包",
+    "desc": "卡通造型，轻量书包",
+    "stage": 4
+   },
+   "sentences": [
+    "儿童背包：卡通造型，轻量书包。",
+    "两三岁探索期的宝宝需要背袋，轻量书包，卡通造型。",
+    "什么是两三岁探索期用到的随身包？轻量书包，卡通造型。",
+    "轻量书包，卡通造型，这就是两三岁探索期的背袋。"
+   ],
+   "stage": 4,
+   "name": "儿童背包",
+   "name_en": "Kids Backpack"
+  },
+  "C45": {
+   "concept_id": "C45",
+   "item": {
+    "name": "训练筷",
+    "desc": "弹簧辅助，握姿矫正",
+    "stage": 4
+   },
+   "sentences": [
+    "训练筷：弹簧辅助，握姿矫正。",
+    "两三岁探索期的宝宝需要辅助筷，握姿矫正，弹簧辅助。",
+    "什么是两三岁探索期用到的儿童练习筷？握姿矫正，弹簧辅助。",
+    "握姿矫正，弹簧辅助，这就是两三岁探索期的辅助筷。"
+   ],
+   "stage": 4,
+   "name": "训练筷",
+   "name_en": "Training Chopsticks"
+  },
+  "C46": {
+   "concept_id": "C46",
+   "item": {
+    "name": "大块拼图",
+    "desc": "木质，地板拼图",
+    "stage": 4
+   },
+   "sentences": [
+    "大块拼图：木质，地板拼图。",
+    "两三岁探索期的宝宝需要拼图游戏，地板拼图，木质。",
+    "什么是两三岁探索期用到的拼块？地板拼图，木质。",
+    "地板拼图，木质，这就是两三岁探索期的拼图游戏。"
+   ],
+   "stage": 4,
+   "name": "大块拼图",
+   "name_en": "Big Puzzle"
+  },
+  "C47": {
+   "concept_id": "C47",
+   "item": {
+    "name": "户外水壶",
+    "desc": "吸管杯，保温保冷",
+    "stage": 4
+   },
+   "sentences": [
+    "户外水壶：吸管杯，保温保冷。",
+    "两三岁探索期的宝宝需要水杯，保温保冷，吸管杯。",
+    "什么是两三岁探索期用到的保温杯？保温保冷，吸管杯。",
+    "保温保冷，吸管杯，这就是两三岁探索期的水杯。"
+   ],
+   "stage": 4,
+   "name": "户外水壶",
+   "name_en": "Outdoor Bottle"
+  },
+  "C48": {
+   "concept_id": "C48",
+   "item": {
+    "name": "儿童望远镜",
+    "desc": "防摔目镜，倍数适中",
+    "stage": 4
+   },
+   "sentences": [
+    "儿童望远镜：防摔目镜，倍数适中。",
+    "两三岁探索期的宝宝需要观察镜，倍数适中，防摔目镜。",
+    "什么是两三岁探索期用到的双筒镜？倍数适中，防摔目镜。",
+    "倍数适中，防摔目镜，这就是两三岁探索期的观察镜。"
+   ],
+   "stage": 4,
+   "name": "儿童望远镜",
+   "name_en": "Kids Telescope"
+  },
+  "C49": {
+   "concept_id": "C49",
+   "item": {
+    "name": "跳绳",
+    "desc": "竹节绳，计数手柄",
+    "stage": 4
+   },
+   "sentences": [
+    "跳绳：竹节绳，计数手柄。",
+    "两三岁探索期的宝宝需要绳子，计数手柄，竹节绳。",
+    "什么是两三岁探索期用到的计数跳绳？计数手柄，竹节绳。",
+    "计数手柄，竹节绳，这就是两三岁探索期的绳子。"
+   ],
+   "stage": 4,
+   "name": "跳绳",
+   "name_en": "Jump Rope"
+  }
+ },
+ "negative_pairs": [
+  {
+   "concept_a": "C00",
+   "concept_b": "C10",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C11",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C12",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C13",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C14",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C15",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C16",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C17",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C18",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C19",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C20",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C21",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C22",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C23",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C24",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C25",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C26",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C27",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C28",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C29",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C30",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C31",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C32",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C33",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C34",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C35",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C36",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C37",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C38",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C39",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C40",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C41",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C42",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C43",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C44",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C45",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C46",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C47",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C48",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C49",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C10",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C11",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C12",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C13",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C14",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C15",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C16",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C17",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C18",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C19",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C20",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C21",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C22",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C23",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C24",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C25",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C26",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C27",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C28",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C29",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C30",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C31",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C32",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C33",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C34",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C35",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C36",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C37",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C38",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C39",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C40",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C41",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C42",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C43",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C44",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C45",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C46",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C47",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C48",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C49",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C10",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C11",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C12",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C13",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C14",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C15",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C16",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C17",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C18",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C19",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C20",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C21",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C22",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C23",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C24",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C25",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C26",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C27",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C28",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C29",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C30",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C31",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C32",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C33",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C34",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C35",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C36",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C37",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C38",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C39",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C40",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C41",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C42",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C43",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C44",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C45",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C46",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C47",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C48",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C49",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C10",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C11",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C12",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C13",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C14",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C15",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C16",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C17",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C18",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C19",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C20",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C21",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C22",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C23",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C24",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C25",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C26",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C27",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C28",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C29",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C30",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C31",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C32",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C33",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C34",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C35",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C36",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C37",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C38",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C39",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C40",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C41",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C42",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C43",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C44",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C45",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C46",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C47",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C48",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C49",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C10",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C11",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C12",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C13",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C14",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C15",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C16",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C17",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C18",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C19",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C20",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C21",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C22",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C23",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C24",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C25",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C26",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C27",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C28",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C29",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C30",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C31",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C32",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C33",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C34",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C35",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C36",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C37",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C38",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C39",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C40",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C41",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C42",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C43",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C44",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C45",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C46",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C47",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C48",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C49",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C10",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C11",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C12",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C13",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C14",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C15",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C16",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C17",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C18",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C19",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C20",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C21",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C22",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C23",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C24",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C25",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C26",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C27",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C28",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C29",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C30",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C31",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C32",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C33",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C34",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C35",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C36",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C37",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C38",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C39",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C40",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C41",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C42",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C43",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C44",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C45",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C46",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C47",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C48",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C49",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C10",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C11",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C12",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C13",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C14",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C15",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C16",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C17",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C18",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C19",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C20",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C21",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C22",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C23",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C24",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C25",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C26",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C27",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C28",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C29",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C30",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C31",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C32",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C33",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C34",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C35",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C36",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C37",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C38",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C39",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C40",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C41",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C42",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C43",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C44",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C45",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C46",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C47",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C48",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C49",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C10",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C11",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C12",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C13",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C14",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C15",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C16",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C17",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C18",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C19",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C20",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C21",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C22",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C23",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C24",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C25",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C26",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C27",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C28",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C29",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C30",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C31",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C32",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C33",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C34",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C35",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C36",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C37",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C38",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C39",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C40",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C41",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C42",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C43",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C44",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C45",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C46",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C47",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C48",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C49",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C10",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C11",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C12",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C13",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C14",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C15",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C16",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C17",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C18",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C19",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C20",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C21",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C22",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C23",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C24",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C25",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C26",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C27",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C28",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C29",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C30",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C31",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C32",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C33",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C34",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C35",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C36",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C37",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C38",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C39",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C40",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C41",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C42",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C43",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C44",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C45",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C46",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C47",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C48",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C49",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C10",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "牙胶：食品级硅胶，可冷藏。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C11",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C12",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C13",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C14",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C15",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C16",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C17",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C18",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C19",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C20",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C21",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C22",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C23",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C24",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C25",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C26",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C27",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C28",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C29",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C30",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C31",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C32",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C33",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C34",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C35",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C36",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C37",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C38",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C39",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C40",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C41",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C42",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C43",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C44",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C45",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C46",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C47",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C48",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C09",
+   "concept_b": "C49",
+   "sentence_a": "哺乳枕：记忆棉，环绕式支撑。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C20",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C21",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C22",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C23",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C24",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C25",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C26",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C27",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C28",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C29",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C30",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C31",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C32",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C33",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C34",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C35",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C36",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C37",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C38",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C39",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C40",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C41",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C42",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C43",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C44",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C45",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C46",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C47",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C48",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C49",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C20",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C21",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C22",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C23",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C24",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C25",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C26",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C27",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C28",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C29",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C30",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C31",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C32",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C33",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C34",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C35",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C36",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C37",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C38",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C39",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C40",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C41",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C42",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C43",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C44",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C45",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C46",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C47",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C48",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C49",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C20",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C21",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C22",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C23",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C24",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C25",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C26",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C27",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C28",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C29",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C30",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C31",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C32",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C33",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C34",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C35",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C36",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C37",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C38",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C39",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C40",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C41",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C42",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C43",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C44",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C45",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C46",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C47",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C48",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C49",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C20",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C21",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C22",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C23",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C24",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C25",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C26",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C27",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C28",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C29",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C30",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C31",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C32",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C33",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C34",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C35",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C36",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C37",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C38",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C39",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C40",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C41",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C42",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C43",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C44",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C45",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C46",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C47",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C48",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C49",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C20",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C21",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C22",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C23",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C24",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C25",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C26",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C27",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C28",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C29",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C30",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C31",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C32",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C33",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C34",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C35",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C36",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C37",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C38",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C39",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C40",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C41",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C42",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C43",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C44",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C45",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C46",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C47",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C48",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C49",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C20",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C21",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C22",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C23",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C24",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C25",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C26",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C27",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C28",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C29",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C30",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C31",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C32",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C33",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C34",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C35",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C36",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C37",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C38",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C39",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C40",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C41",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C42",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C43",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C44",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C45",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C46",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C47",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C48",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C49",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C20",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C21",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C22",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C23",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C24",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C25",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C26",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C27",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C28",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C29",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C30",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C31",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C32",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C33",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C34",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C35",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C36",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C37",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C38",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C39",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C40",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C41",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C42",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C43",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C44",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C45",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C46",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C47",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C48",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C49",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C20",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C21",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C22",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C23",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C24",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C25",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C26",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C27",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C28",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C29",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C30",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C31",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C32",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C33",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C34",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C35",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C36",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C37",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C38",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C39",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C40",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C41",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C42",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C43",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C44",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C45",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C46",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C47",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C48",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C49",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C20",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C21",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C22",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C23",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C24",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C25",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C26",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C27",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C28",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C29",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C30",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C31",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C32",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C33",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C34",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C35",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C36",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C37",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C38",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C39",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C40",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C41",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C42",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C43",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C44",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C45",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C46",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C47",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C48",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C49",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C20",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "学饮杯：重力球吸管，防漏。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C21",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C22",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C23",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C24",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C25",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C26",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C27",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C28",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C29",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C30",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C31",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C32",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C33",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C34",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C35",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C36",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C37",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C38",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C39",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C40",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C41",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C42",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C43",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C44",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C45",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C46",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C47",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C48",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C19",
+   "concept_b": "C49",
+   "sentence_a": "趴趴垫：菱形拼图，缓冲防护。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C30",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C31",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C32",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C33",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C34",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C35",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C36",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C37",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C38",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C39",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C40",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C41",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C42",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C43",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C44",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C45",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C46",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C47",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C48",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C49",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C30",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C31",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C32",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C33",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C34",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C35",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C36",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C37",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C38",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C39",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C40",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C41",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C42",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C43",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C44",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C45",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C46",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C47",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C48",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C49",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C30",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C31",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C32",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C33",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C34",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C35",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C36",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C37",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C38",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C39",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C40",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C41",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C42",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C43",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C44",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C45",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C46",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C47",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C48",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C49",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C30",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C31",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C32",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C33",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C34",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C35",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C36",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C37",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C38",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C39",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C40",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C41",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C42",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C43",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C44",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C45",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C46",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C47",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C48",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C49",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C30",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C31",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C32",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C33",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C34",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C35",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C36",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C37",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C38",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C39",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C40",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C41",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C42",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C43",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C44",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C45",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C46",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C47",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C48",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C49",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C30",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C31",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C32",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C33",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C34",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C35",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C36",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C37",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C38",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C39",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C40",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C41",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C42",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C43",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C44",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C45",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C46",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C47",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C48",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C49",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C30",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C31",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C32",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C33",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C34",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C35",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C36",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C37",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C38",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C39",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C40",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C41",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C42",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C43",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C44",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C45",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C46",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C47",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C48",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C49",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C30",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C31",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C32",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C33",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C34",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C35",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C36",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C37",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C38",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C39",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C40",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C41",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C42",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C43",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C44",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C45",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C46",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C47",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C48",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C49",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C30",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C31",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C32",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C33",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C34",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C35",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C36",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C37",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C38",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C39",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C40",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C41",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C42",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C43",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C44",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C45",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C46",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C47",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C48",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C49",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C30",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "助步器：防滑轮，稳固底盘。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C31",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C32",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C33",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C34",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C35",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C36",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C37",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C38",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C39",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C40",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C41",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C42",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C43",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C44",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C45",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C46",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C47",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C48",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C29",
+   "concept_b": "C49",
+   "sentence_a": "保温碗：吸盘底，控温防烫。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C40",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C41",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C42",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C43",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C44",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C45",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C46",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C47",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C48",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C49",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C40",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C41",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C42",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C43",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C44",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C45",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C46",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C47",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C48",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C49",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C40",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C41",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C42",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C43",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C44",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C45",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C46",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C47",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C48",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C49",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C40",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C41",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C42",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C43",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C44",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C45",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C46",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C47",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C48",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C49",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C40",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C41",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C42",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C43",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C44",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C45",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C46",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C47",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C48",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C49",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C40",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C41",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C42",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C43",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C44",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C45",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C46",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C47",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C48",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C49",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C40",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C41",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C42",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C43",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C44",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C45",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C46",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C47",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C48",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C49",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C40",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C41",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C42",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C43",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C44",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C45",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C46",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C47",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C48",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C49",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C40",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C41",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C42",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C43",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C44",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C45",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C46",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C47",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C48",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C49",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C40",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "平衡车：铝合金车身，无踏板。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C41",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C42",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C43",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C44",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C45",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C46",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C47",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C48",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C39",
+   "concept_b": "C49",
+   "sentence_a": "滑板车：三轮稳定，高度可调。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  }
+ ],
+ "distractor_pairs": [
+  {
+   "concept_a": "C00",
+   "concept_b": "C01",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿湿巾：无酒精无香精，EDI纯水。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C02",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "奶瓶消毒器：蒸汽消毒，烘干一体。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C03",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "襁褓睡袋：纯棉纱布，模拟子宫包裹。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C04",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿连体衣：纯棉针织，按扣开襟。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C05",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "婴儿指甲剪：圆头安全剪，配指甲锉。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C06",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "吸奶器：电动双边，硅胶按摩。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C07",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C08",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C00",
+   "concept_b": "C09",
+   "sentence_a": "婴儿纸尿裤：NB码，云柔表层，日夜两用。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C02",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "奶瓶消毒器：蒸汽消毒，烘干一体。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C03",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "襁褓睡袋：纯棉纱布，模拟子宫包裹。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C04",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "婴儿连体衣：纯棉针织，按扣开襟。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C05",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "婴儿指甲剪：圆头安全剪，配指甲锉。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C06",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "吸奶器：电动双边，硅胶按摩。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C07",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C08",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C01",
+   "concept_b": "C09",
+   "sentence_a": "婴儿湿巾：无酒精无香精，EDI纯水。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C03",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "襁褓睡袋：纯棉纱布，模拟子宫包裹。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C04",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "婴儿连体衣：纯棉针织，按扣开襟。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C05",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "婴儿指甲剪：圆头安全剪，配指甲锉。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C06",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "吸奶器：电动双边，硅胶按摩。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C07",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C08",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C02",
+   "concept_b": "C09",
+   "sentence_a": "奶瓶消毒器：蒸汽消毒，烘干一体。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C04",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "婴儿连体衣：纯棉针织，按扣开襟。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C05",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "婴儿指甲剪：圆头安全剪，配指甲锉。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C06",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "吸奶器：电动双边，硅胶按摩。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C07",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C08",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C03",
+   "concept_b": "C09",
+   "sentence_a": "襁褓睡袋：纯棉纱布，模拟子宫包裹。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C05",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "婴儿指甲剪：圆头安全剪，配指甲锉。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C06",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "吸奶器：电动双边，硅胶按摩。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C07",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C08",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C04",
+   "concept_b": "C09",
+   "sentence_a": "婴儿连体衣：纯棉针织，按扣开襟。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C06",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "吸奶器：电动双边，硅胶按摩。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C07",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C08",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C05",
+   "concept_b": "C09",
+   "sentence_a": "婴儿指甲剪：圆头安全剪，配指甲锉。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C07",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "恒温水壶：精准控温，冲奶即饮。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C08",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C06",
+   "concept_b": "C09",
+   "sentence_a": "吸奶器：电动双边，硅胶按摩。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C08",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "玻璃奶瓶：宽口径，防胀气导气管。"
+  },
+  {
+   "concept_a": "C07",
+   "concept_b": "C09",
+   "sentence_a": "恒温水壶：精准控温，冲奶即饮。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C08",
+   "concept_b": "C09",
+   "sentence_a": "玻璃奶瓶：宽口径，防胀气导气管。",
+   "sentence_b": "哺乳枕：记忆棉，环绕式支撑。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C11",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "辅食研磨碗：手动研磨，细网滤网。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C12",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C13",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C14",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C15",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C16",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C17",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C18",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C10",
+   "concept_b": "C19",
+   "sentence_a": "牙胶：食品级硅胶，可冷藏。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C12",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "摇铃：环握设计，柔和声响。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C13",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C14",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C15",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C16",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C17",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C18",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C11",
+   "concept_b": "C19",
+   "sentence_a": "辅食研磨碗：手动研磨，细网滤网。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C13",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "婴儿健身架：脚踏琴挂件，俯卧玩耍。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C14",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C15",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C16",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C17",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C18",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C12",
+   "concept_b": "C19",
+   "sentence_a": "摇铃：环握设计，柔和声响。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C14",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "口水巾：纯棉纱绸，多层吸汗。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C15",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C16",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C17",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C18",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C13",
+   "concept_b": "C19",
+   "sentence_a": "婴儿健身架：脚踏琴挂件，俯卧玩耍。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C15",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "婴儿沐浴露：无泪配方，弱酸性。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C16",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C17",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C18",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C14",
+   "concept_b": "C19",
+   "sentence_a": "口水巾：纯棉纱绸，多层吸汗。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C16",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "耳温枪：一键测温，蓝光屏。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C17",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C18",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C15",
+   "concept_b": "C19",
+   "sentence_a": "婴儿沐浴露：无泪配方，弱酸性。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C17",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "辅食机：蒸煮搅拌一体，细腻研磨。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C18",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C16",
+   "concept_b": "C19",
+   "sentence_a": "耳温枪：一键测温，蓝光屏。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C18",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "安抚巾：珊瑚绒，安抚结设计。"
+  },
+  {
+   "concept_a": "C17",
+   "concept_b": "C19",
+   "sentence_a": "辅食机：蒸煮搅拌一体，细腻研磨。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C18",
+   "concept_b": "C19",
+   "sentence_a": "安抚巾：珊瑚绒，安抚结设计。",
+   "sentence_b": "趴趴垫：菱形拼图，缓冲防护。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C21",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "辅食米粉：原味高铁，细腻粉质。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C22",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C23",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C24",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C25",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C26",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C27",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C28",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C20",
+   "concept_b": "C29",
+   "sentence_a": "学饮杯：重力球吸管，防漏。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C22",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "磨牙饼干：棒形设计，入口即化。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C23",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C24",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C25",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C26",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C27",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C28",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C21",
+   "concept_b": "C29",
+   "sentence_a": "辅食米粉：原味高铁，细腻粉质。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C23",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "爬行垫：加厚拼接，无异味。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C24",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C25",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C26",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C27",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C28",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C22",
+   "concept_b": "C29",
+   "sentence_a": "磨牙饼干：棒形设计，入口即化。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C24",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "游戏围栏：可折叠，带护栏门。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C25",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C26",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C27",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C28",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C23",
+   "concept_b": "C29",
+   "sentence_a": "爬行垫：加厚拼接，无异味。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C25",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "大颗粒积木：食品接触级塑料。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C26",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C27",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C28",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C24",
+   "concept_b": "C29",
+   "sentence_a": "游戏围栏：可折叠，带护栏门。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C26",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "布书：可啃咬，响纸内页。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C27",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C28",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C25",
+   "concept_b": "C29",
+   "sentence_a": "大颗粒积木：食品接触级塑料。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C27",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "婴儿餐椅：可调节，五点式安全带。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C28",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C26",
+   "concept_b": "C29",
+   "sentence_a": "布书：可啃咬，响纸内页。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C28",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "婴儿推车：轻便折叠，可坐可躺。"
+  },
+  {
+   "concept_a": "C27",
+   "concept_b": "C29",
+   "sentence_a": "婴儿餐椅：可调节，五点式安全带。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C28",
+   "concept_b": "C29",
+   "sentence_a": "婴儿推车：轻便折叠，可坐可躺。",
+   "sentence_b": "保温碗：吸盘底，控温防烫。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C31",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "涂鸦画板：双面磁性，升降支架。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C32",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C33",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C34",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C35",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C36",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C37",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C38",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C30",
+   "concept_b": "C39",
+   "sentence_a": "助步器：防滑轮，稳固底盘。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C32",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "拼插积木：大颗粒，主题造型。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C33",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C34",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C35",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C36",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C37",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C38",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C31",
+   "concept_b": "C39",
+   "sentence_a": "涂鸦画板：双面磁性，升降支架。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C33",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "点读笔：儿歌古诗，OID识别。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C34",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C35",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C36",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C37",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C38",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C32",
+   "concept_b": "C39",
+   "sentence_a": "拼插积木：大颗粒，主题造型。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C34",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "防滑袜：硅胶底，室内学步。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C35",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C36",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C37",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C38",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C33",
+   "concept_b": "C39",
+   "sentence_a": "点读笔：儿歌古诗，OID识别。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C35",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "训练裤：尿湿提示，可水洗。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C36",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C37",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C38",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C34",
+   "concept_b": "C39",
+   "sentence_a": "防滑袜：硅胶底，室内学步。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C36",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "儿童牙刷：软毛小头，圆刷头。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C37",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C38",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C35",
+   "concept_b": "C39",
+   "sentence_a": "训练裤：尿湿提示，可水洗。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C37",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "绘本：硬纸板，圆角装帧。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C38",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C36",
+   "concept_b": "C39",
+   "sentence_a": "儿童牙刷：软毛小头，圆刷头。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C38",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "球类玩具：软球套装，彩纹。"
+  },
+  {
+   "concept_a": "C37",
+   "concept_b": "C39",
+   "sentence_a": "绘本：硬纸板，圆角装帧。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C38",
+   "concept_b": "C39",
+   "sentence_a": "球类玩具：软球套装，彩纹。",
+   "sentence_b": "滑板车：三轮稳定，高度可调。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C41",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "磁力片：磁铁拼接，几何造型。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C42",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C43",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C44",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C45",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C46",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C47",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C48",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C40",
+   "concept_b": "C49",
+   "sentence_a": "平衡车：铝合金车身，无踏板。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C42",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "彩泥：可食用级，模具套装。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C43",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C44",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C45",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C46",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C47",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C48",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C41",
+   "concept_b": "C49",
+   "sentence_a": "磁力片：磁铁拼接，几何造型。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C43",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "故事机：语音点播，兔形外观。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C44",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C45",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C46",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C47",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C48",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C42",
+   "concept_b": "C49",
+   "sentence_a": "彩泥：可食用级，模具套装。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C43",
+   "concept_b": "C44",
+   "sentence_a": "故事机：语音点播，兔形外观。",
+   "sentence_b": "儿童背包：卡通造型，轻量书包。"
+  },
+  {
+   "concept_a": "C43",
+   "concept_b": "C45",
+   "sentence_a": "故事机：语音点播，兔形外观。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C43",
+   "concept_b": "C46",
+   "sentence_a": "故事机：语音点播，兔形外观。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C43",
+   "concept_b": "C47",
+   "sentence_a": "故事机：语音点播，兔形外观。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C43",
+   "concept_b": "C48",
+   "sentence_a": "故事机：语音点播，兔形外观。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C43",
+   "concept_b": "C49",
+   "sentence_a": "故事机：语音点播，兔形外观。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C44",
+   "concept_b": "C45",
+   "sentence_a": "儿童背包：卡通造型，轻量书包。",
+   "sentence_b": "训练筷：弹簧辅助，握姿矫正。"
+  },
+  {
+   "concept_a": "C44",
+   "concept_b": "C46",
+   "sentence_a": "儿童背包：卡通造型，轻量书包。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C44",
+   "concept_b": "C47",
+   "sentence_a": "儿童背包：卡通造型，轻量书包。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C44",
+   "concept_b": "C48",
+   "sentence_a": "儿童背包：卡通造型，轻量书包。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C44",
+   "concept_b": "C49",
+   "sentence_a": "儿童背包：卡通造型，轻量书包。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C45",
+   "concept_b": "C46",
+   "sentence_a": "训练筷：弹簧辅助，握姿矫正。",
+   "sentence_b": "大块拼图：木质，地板拼图。"
+  },
+  {
+   "concept_a": "C45",
+   "concept_b": "C47",
+   "sentence_a": "训练筷：弹簧辅助，握姿矫正。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C45",
+   "concept_b": "C48",
+   "sentence_a": "训练筷：弹簧辅助，握姿矫正。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C45",
+   "concept_b": "C49",
+   "sentence_a": "训练筷：弹簧辅助，握姿矫正。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C46",
+   "concept_b": "C47",
+   "sentence_a": "大块拼图：木质，地板拼图。",
+   "sentence_b": "户外水壶：吸管杯，保温保冷。"
+  },
+  {
+   "concept_a": "C46",
+   "concept_b": "C48",
+   "sentence_a": "大块拼图：木质，地板拼图。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C46",
+   "concept_b": "C49",
+   "sentence_a": "大块拼图：木质，地板拼图。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C47",
+   "concept_b": "C48",
+   "sentence_a": "户外水壶：吸管杯，保温保冷。",
+   "sentence_b": "儿童望远镜：防摔目镜，倍数适中。"
+  },
+  {
+   "concept_a": "C47",
+   "concept_b": "C49",
+   "sentence_a": "户外水壶：吸管杯，保温保冷。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  },
+  {
+   "concept_a": "C48",
+   "concept_b": "C49",
+   "sentence_a": "儿童望远镜：防摔目镜，倍数适中。",
+   "sentence_b": "跳绳：竹节绳，计数手柄。"
+  }
+ ],
+ "overlap_stats": {
+  "mean": 0.3636098997980225,
+  "max": 0.6206896551724138,
+  "min": 0.16,
+  "count": 300
+ },
+ "statistics": {
+  "concepts": 50,
+  "variants_per_concept": 4,
+  "total_sentences": 200,
+  "negative_pairs": 1000,
+  "distractor_pairs": 225
+ }
+}

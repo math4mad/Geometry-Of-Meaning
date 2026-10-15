@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -27,9 +28,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install numpy scipy matplotlib pandas torch transformers peft umap-learn scikit-learn
+          pip install numpy scipy matplotlib pandas torch transformers umap-learn scikit-learn
 
-      - name: Download model & regenerate representations (0.5B)
+      - name: Regenerate representations (0.5B)
         run: |
           python extract_representations.py
 
@@ -41,9 +42,9 @@ jobs:
         run: |
           python attention_tracing.py
 
-      - name: Regenerate ablation figures
-        run: |
-          python train_ablation.py
+      # NOTE: train_ablation.py is skipped in CI — LoRA training on CPU
+      # is too slow (30+ min). Ablation figures are committed to the repo
+      # and can be regenerated locally with GPU/MPS.
 
       - uses: quarto-dev/quarto-actions/setup@v2
         with:

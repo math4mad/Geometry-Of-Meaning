@@ -1,6 +1,6 @@
 {
   "title": "Geometry of Meaning - Paraphrase Corpus",
-  "id": "geometry-of-meaning/paraphrase-corpus",
+  "id": "math4amd/paraphrase-corpus",
   "licenses": [{"name": "CC0-1.0"}],
   "description": "50 concepts × 4 variants (original + 3 paraphrases) of baby product descriptions. Used for testing geometric collapse of same-concept different-token expressions in Transformer hidden states."
 }

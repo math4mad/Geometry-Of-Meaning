@@ -28,7 +28,7 @@ if dev == "cuda":
 
 # ── Cell 3: 加载语料 ──
 # 从 Kaggle Dataset 上传 corpus_paraphrase.json, 或内联粘贴
-DS_PATH = "/kaggle/input/geometry-of-meaning/corpus_paraphrase.json"
+DS_PATH = "/kaggle/input/paraphrase-corpus/corpus_paraphrase.json"
 
 if os.path.exists(DS_PATH):
     with open(DS_PATH) as f:
@@ -66,7 +66,7 @@ t0 = time.time()
 tok = AutoTokenizer.from_pretrained(MODEL)
 model = AutoModelForCausalLM.from_pretrained(
     MODEL,
-    dtype=torch.bfloat16,
+    torch_dtype=torch.bfloat16,
     attn_implementation="eager",
     device_map="auto",
 )

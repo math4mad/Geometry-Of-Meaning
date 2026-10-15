@@ -25,7 +25,8 @@ import torch
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CORPUS = os.path.join(HERE, "corpus_paraphrase.json")
-MODEL = os.path.expanduser("~/Programming/code-2026/first-lora/model")
+_local = os.path.expanduser("~/Programming/code-2026/first-lora/model")
+MODEL = _local if os.path.isdir(_local) else "Qwen/Qwen2.5-0.5B-Instruct"
 OUT = os.path.join(HERE, "representations.npz")
 
 dev = "mps" if torch.backends.mps.is_available() else "cpu"

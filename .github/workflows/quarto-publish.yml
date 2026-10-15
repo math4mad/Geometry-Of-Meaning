@@ -50,12 +50,14 @@ jobs:
         with:
           version: "1.6.42"
 
-      - name: Render Quarto document
-        run: quarto render report_geometry_of_meaning.qmd --to html
+      - name: Render Quarto to docs/
+        run: |
+          quarto render report_geometry_of_meaning.qmd --to html --output-dir docs
 
-      - name: Publish to GitHub Pages (gh-pages branch)
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

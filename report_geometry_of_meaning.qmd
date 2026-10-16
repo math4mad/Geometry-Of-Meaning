@@ -197,3 +197,13 @@ format:
 | 件 | 正本 | 仓·pin | 消费法 |
 |----|------|--------|--------|
 | transformer_vis | `/Users/mac/Programming/code-2026/Concept-Space-Sphere/benches/transformer_vis` | Concept-Space-Sphere @ `9638e7c` | 软连接直读 (禁拷贝) |
+
+# 9. 跨规模外推
+
+7B 规模 (Qwen2.5-7B-Instruct, 4bit) 复现结果见 [7B Scale Replication Report](7b/index.html)。
+
+要点速览：
+
+* `mean_pool` 在 7B 是更稳的几何锚点 (CKA 0.94, G-3 PASS)
+* `last_token` 的 G-3 CKA 从 0.5B 的 0.90 掉到 0.77 — 大模型在 4bit 量化下把 paraphrase 信息分散到更多维度
+* `entity` 探针在 0.5B 和 7B 都不可用

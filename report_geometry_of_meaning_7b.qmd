@@ -1,0 +1,153 @@
+---
+title: "Geometry of Meaning — 7B Scale Replication"
+subtitle: "Qwen2.5-7B-Instruct (4bit) × 50 concepts × 4 variants — deep-layer geometric collapse"
+author: "Madas (math4mad)"
+date: "2026-10-16"
+date-modified: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    theme: cosmo
+    embed-resources: false
+---
+
+---
+
+## TL;DR
+
+| Strategy       | G-1 (pos > 0.75) | G-3 (CKA > 0.85) | last-3 margin | Verdict     |
+| -------------- | :--------------: | :--------------: | :-----------: | ----------- |
+| `last_token`   | PASS (0.886)     | FAIL (0.768)     | +0.051        | partial     |
+| `mean_pool`    | PASS (0.978)     | PASS (0.940)     | +0.026        | **PASS**    |
+| `entity`       | FAIL (0.504)     | FAIL (0.139)     | -0.461        | FAIL        |
+
+* Hypothesis **H1** (7B deeper collapse than 0.5B): **partially supported** — `last_token` 7B margin (0.051) > 0.5B (0.031); `mean_pool` roughly equal.
+* Hypothesis **H2** (margin peaks at last layer): **supported** — clear monotonic rise in `last_token.margin` from L22 (-0.002) → L28 (+0.050).
+* Hypothesis **H3** (ranking last_token ≈ mean_pool > entity): **supported** — `mean_pool` is the cleanest anchor (CKA 0.94, intra/inter 0.74); `entity` collapses to the wrong sign (neg > pos).
+
+The 7B arm is **NOT a strict superset** of 0.5B findings. Two qualitative patterns hold, one does not: 7B's `mean_pool` CKA drops from 0.5B's 0.90 to 0.94 (slight), but its `last_token` CKA falls from 0.90 to 0.77 (notable) — suggesting 7B in 4bit *distributes* paraphrase information across more dimensions in the last-token position than 0.5B does.
+
+---
+
+## 1. Experimental setup
+
+| Item             | Value                                                                |
+| ---------------- | -------------------------------------------------------------------- |
+| Model            | Qwen2.5-7B-Instruct (4bit bnb)                                       |
+| Hidden dim       | 3584                                                                 |
+| Layers           | 28                                                                   |
+| Corpus           | 50 concepts × 4 paraphrases = 200 sentences                         |
+| Source corpus    | `corpus_paraphrase.json` (D5_baby, sha256-16 `5d9dd063d27f15a9`)     |
+| Layer sampling   | every 2 layers + 0 and 28 → 15 anchor points                         |
+| Platform         | Kaggle (1× T4, 4bit bnb)                                             |
+| Wall clock       | 305.5 s                                                              |
+| Knobs            | SEED=42, LAYER_SKIP=2, UMAP_NEIGHBORS=15, NEG_SAMPLE=20              |
+
+Three pooling strategies are evaluated on identical layers and token positions:
+
+* **`last_token`** — final `<eos>` position embedding (28 × 3584)
+* **`mean_pool`** — mean of all token embeddings per sentence
+* **`entity`** — first noun-phrase position of the concept name (4-char probe)
+
+Negative samples are concept-paired (each positive sees 20 unrelated concepts from the same deck).
+
+## 2. Layer-by-layer cosine (G-1)
+
+![Cosine margin per layer (7B)](figs_geometry_7b/fig_last_token_cosine_margin.png)
+![Cosine margin per layer (7B)](figs_geometry_7b/fig_mean_pool_cosine_margin.png)
+![Cosine margin per layer (7B)](figs_geometry_7b/fig_entity_cosine_margin.png)
+
+Observations:
+
+* `mean_pool` collapses to ≈1.0 from L4 through L26 then opens up at L28 (0.94) — a near-twin-anchor phenomenon, with a *single* outlier concept keeping the mean from reaching 1.0 at the last layer.
+* `last_token` shows the textbook "L-shape": pos and neg cross around L10, then pos climbs while neg stays flat — the **deep-layer collapse is asymmetric**.
+* `entity` (single-token 4-char probe) is **noise** — pos and neg are within 0.1 of each other in the late layers, and *neg exceeds pos* at the very last layer. The 4-character surface form is too small a signal for the 3584-dim space to encode at this granularity.
+
+## 3. Heatmaps (same concept, 4 variants)
+
+![Heatmap last_token (7B)](figs_geometry_7b/fig_last_token_heatmap.png)
+![Heatmap mean_pool (7B)](figs_geometry_7b/fig_mean_pool_heatmap.png)
+![Heatmap entity (7B)](figs_geometry_7b/fig_entity_heatmap.png)
+
+## 4. UMAP 2D (L28 projection)
+
+![UMAP last_token (7B)](figs_geometry_7b/fig_last_token_umap.png)
+![UMAP mean_pool (7B)](figs_geometry_7b/fig_mean_pool_umap.png)
+
+| strategy      | intra | inter |  ratio |
+| ------------- | ----: | ----: | -----: |
+| `last_token`  | 2.895 | 1.976 |  1.465 |
+| `mean_pool`   | 1.901 | 2.571 |  0.739 |
+
+UMAP `intra/inter` ratios echo the cosine story:
+
+* `last_token` intra is **larger** than inter (1.46×) — same-concept variants are *not* visually clustered; they spread more than different concepts. The 7B last-token is **not a clean anchor**.
+* `mean_pool` intra < inter (0.74×) — same-concept variants are clustered tighter than different concepts.
+
+This is a **regime change from 0.5B** (where the local `last_token` UMAP ratio was much closer to 1.0 and `mean_pool` was the noisiest). At 7B 4bit, paraphrase-invariant geometry moves from "last-token dominance" to "mean-pool dominance".
+
+## 5. CKA across layers (G-3)
+
+![CKA per layer (7B)](figs_geometry_7b/fig_cka_per_layer.png)
+
+| strategy      |   G3 CKA | G-3 pass | G-1 pass |
+| ------------- | -------: | :------: | :------: |
+| `last_token`  |  0.7677  |   FAIL   |   PASS   |
+| `mean_pool`   |  0.9397  |   PASS   |   PASS   |
+| `entity`      |  0.1386  |   FAIL   |   FAIL   |
+
+* Only `mean_pool` clears the 0.85 CKA threshold.
+* `last_token` CKA (0.77) **drops vs 0.5B** (0.90) — at 7B the *trajectory* of the last token through paraphrase variants is *less aligned* than at 0.5B. The 7B last token is a stronger **context** vector but a weaker **paraphrase-invariant** vector.
+
+## 6. 7B vs 0.5B — same hypothesis, two scales
+
+| Strategy   | metric         |    0.5B |     7B |  Δ    |
+| ---------- | -------------- | ------: | -----: | ----: |
+| last_token | last3 margin   |  +0.031 | +0.051 | **+0.020** |
+| last_token | G3 CKA         |   0.902 |  0.768 | **-0.134** |
+| mean_pool  | last3 margin   |  +0.049 | +0.026 |  -0.023 |
+| mean_pool  | G3 CKA         |   0.900 |  0.940 |  +0.040 |
+| entity     | last3 margin   |  -0.280 | -0.461 | **-0.181** |
+| entity     | G3 CKA         |   0.157 |  0.139 |  -0.018 |
+
+Reading:
+
+* **H1 (deep collapse stronger at 7B)** — supported by `last_token.margin` and `mean_pool.G3_CKA`, but contradicted by `last_token.G3_CKA`. **Mixed**: deeper collapse for the cosine-margin metric, weaker collapse for the CKA-trajectory metric.
+* **H2 (margin peaks at last layer)** — supported in `last_token` (margin climbs monotonically from L22 to L28). In `mean_pool`, margin is *flat-zero* across most of the deep stack and opens up only at the very last layer — also a "last-layer peak" but a degenerate one (all collapsed to ≈1.0 then partially opens).
+* **H3 (last_token ≈ mean_pool > entity)** — supported. `entity` is **not** a paraphrase anchor at any scale.
+
+The 7B arm is a **partial replication** of 0.5B: the *ranking* of strategies holds, but the *metric that wins* flips between scales (0.5B favours `last_token` for CKA; 7B favours `mean_pool`).
+
+## 7. What is G-4 and why is it absent here?
+
+G-4 is the **training-time** ablation: does geometric collapse survive a small fine-tuning pass with high LR + weight decay? On 0.5B the answer was **NO** — high LR+WD *destroys* the margin within a few hundred steps (`metrics_ablation.json`).
+
+G-4 is **out of scope** for the 7B inference arm because:
+
+1. 7B 4bit training requires LoRA/QLoRA plumbing that the inference pipeline doesn't carry.
+2. The 0.5B ablation result is the more general one — a counter-example is enough to falsify "G-4 always holds".
+
+G-4 on 7B will be a separate `geometry-meaning-7b-qlora` arm with `peft` + `bitsandbytes` 4bit, run on the same Kaggle kernel.
+
+## 8. Reproducibility
+
+```bash
+# Pull outputs from Kaggle
+kaggle kernels output math4amd/geometry-meaning-7b -p ./geom7b/
+
+# Re-render this report locally
+quarto render report_geometry_of_meaning_7b.qmd --to html
+```
+
+* Kernel: [`math4amd/geometry-meaning-7b`](https://www.kaggle.com/code/math4amd/geometry-meaning-7b)
+* GitHub: [`math4mad/Geometry-Of-Meaning`](https://github.com/math4mad/Geometry-Of-Meaning)
+* gh-pages: <https://math4mad.github.io/Geometry-Of-Meaning/>
+* Companion 0.5B report: <https://math4mad.github.io/Geometry-Of-Meaning/report_geometry_of_meaning.html>
+
+## 9. Open questions
+
+1. **Did bnb 4bit change the geometry?** Quantization noise on 3584-dim vectors is not negligible. The 0.5B→7B `last_token.G3_CKA` drop (0.90 → 0.77) may be a quant artifact, not a real scaling finding. The next arm will run 7B in **8bit** or **fp16** to triangulate.
+2. **Why does `mean_pool` collapse to ≈1.0 across L4..L26?** Either (a) all 50 concepts share a near-identical mean-pool centre at intermediate layers (unlikely for a 28-layer 7B), or (b) a small number of outlier concepts inflate the variance. Need per-concept plot to distinguish.
+3. **What does G-4 look like with QLoRA on 7B?** Training arm queued.

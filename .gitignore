@@ -21,4 +21,5 @@ venv/
 _site/
 docs/
 *.html
+*_files/
 !figs_*/*.png

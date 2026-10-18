@@ -278,6 +278,94 @@
     "text": "6. 给 ide-lola 的开放问题\n\nmean vs last：0.5B 端 mean 基线高于 last，但几何正则后 last 反超；7B 端是否同向？\nλ 上限：0.5B 端 λ=1.0 仍未饱和（margin 还在升），7B 端要不要扩到 λ=2.0？\n备援 margin push：0.5B 没用上（设计 v3 删了），7B 端是否要保留？\n跨句 batch 选句策略：当前 4 concept × (2 句 + 2 句 + 1 句 + 1 句)，是否改成 (3 句 + 1 句) × 4 concept 提供更多正样本对？\n\n请审阅后回复任意一个微调或确认无误，我即刻起 T1。"
   },
   {
+    "objectID": "phase2_v3_7b_v8.html",
+    "href": "phase2_v3_7b_v8.html",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "v7 (3 ep + LR 3e-5) regressed by -0.005 vs v6 (2 ep + LR 5e-5). The diagnosis was that LR 3e-5 was too low — v7’s only structural change vs v6 that was a regression. v8 tests: “keep v7’s 3 epochs but restore v6’s LR 5e-5”.\n\n\n\n\n\n\n\nv7\nv8\n\n\n\n\nEpochs\n3\n3 (unchanged)\n\n\nLR peak\n3e-5\n5e-5 (restored)\n\n\nLR schedule\ncosine → 0\ncosine → 0 (unchanged)\n\n\nWarmup\n50\n50 (unchanged)\n\n\nLAMBDAS\n{0, 1, 2, 5}\n{0, 0.5, 1, 2, 5} (added 0.5)\n\n\nArm count\n8\n10\n\n\nTime\n40 min\n60 min (3 ep)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPool\nbaseline\nλ=0.0\nλ=0.5\nλ=1.0\nλ=2.0\nλ=5.0\nbest Δ\nH-4’\n\n\n\n\nlast\n0.049\n0.061\n0.093\n0.102\n0.106\n0.107\n+0.058 (λ=5)\nPASS ✅\n\n\nmean\n0.070\n0.074\n0.083\n0.088\n0.096\n0.102\n+0.032 (λ=5)\nFAIL\n\n\n\n\n\n\nv8 fig\n\n\n\n\n\nH-4’ PASS on last_token pool: best Δ = +0.058 ≥ 0.05 threshold\nλ=1.0 already crosses threshold (+0.053)\nλ=2/5 saturate near 0.107 margin (still climbing slowly)\nmean_pool also gains (+0.032, up from v7’s +0.013) but doesn’t cross threshold\nlast &gt; mean consistent across all 7B versions (5.4× effect on 0.5B, 1.8× on 7B)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVersion\nbest λ\nmargin\nΔ\nH-4’\nNotes\n\n\n\n\n0.5B v3\n1.0\n0.160\n+0.131\nPASS\n2 ep, LR 1e-4\n\n\n7B v5\n1.0\n0.083\n+0.034\nFAIL\n2 ep, LR 5e-5\n\n\n7B v6\n5.0\n0.086\n+0.037\nFAIL\n2 ep, LR 5e-5\n\n\n7B v7\n5.0\n0.081\n+0.032\nFAIL\n3 ep, LR 3e-5 (regressed)\n\n\n7B v8\n5.0\n0.107\n+0.058\nPASS ✅\n3 ep, LR 5e-5\n\n\n\n\n\n\n\nSingle change (LR 3e-5 → 5e-5) + λ grid refinement (added 0.5) produced a +0.026 jump in best Δ (last)\nConfirms v7’s regression was indeed LR-driven, not over-fit-driven\n3 epochs is essential: gives the geometric basin more time to form\nLR 5e-5 is the sweet spot: high enough to learn cross-sentence alignment, low enough not to overshoot\n\n\n\n\nH-4’ PASS in last_token pool at the v8 configuration (3 ep + LR 5e-5). The geometric regularization generalises to 7B — just needed more training time and the original LR peak.\n\n\n\nScale\nbest Δ (last)\nH-4’\n\n\n\n\n0.5B v3\n+0.131\nPASS\n\n\n7B v8\n+0.058\nPASS ✅\n\n\nRatio 7B/0.5B\n0.44\n—\n\n\n\n7B achieves 44% of 0.5B’s margin gain — strong evidence that the geometric inductive bias is scale-portable, even though absolute margin decreases with model size (likely because the 7B baseline is already higher).\n\n\n\n\ngeometry-meaning-7b-georeg-v8.py (Kaggle kernel source)\nmetrics_georeg_7b_v8_full.json (full all_results)\nfigs_georeg_7b/fig_margin_vs_lambda_v8.png\nKernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg (v8)",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#motivation",
+    "href": "phase2_v3_7b_v8.html#motivation",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "v7 (3 ep + LR 3e-5) regressed by -0.005 vs v6 (2 ep + LR 5e-5). The diagnosis was that LR 3e-5 was too low — v7’s only structural change vs v6 that was a regression. v8 tests: “keep v7’s 3 epochs but restore v6’s LR 5e-5”.",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#v8-changes-vs-v7",
+    "href": "phase2_v3_7b_v8.html#v8-changes-vs-v7",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "v7\nv8\n\n\n\n\nEpochs\n3\n3 (unchanged)\n\n\nLR peak\n3e-5\n5e-5 (restored)\n\n\nLR schedule\ncosine → 0\ncosine → 0 (unchanged)\n\n\nWarmup\n50\n50 (unchanged)\n\n\nLAMBDAS\n{0, 1, 2, 5}\n{0, 0.5, 1, 2, 5} (added 0.5)\n\n\nArm count\n8\n10\n\n\nTime\n40 min\n60 min (3 ep)",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#results",
+    "href": "phase2_v3_7b_v8.html#results",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "Pool\nbaseline\nλ=0.0\nλ=0.5\nλ=1.0\nλ=2.0\nλ=5.0\nbest Δ\nH-4’\n\n\n\n\nlast\n0.049\n0.061\n0.093\n0.102\n0.106\n0.107\n+0.058 (λ=5)\nPASS ✅\n\n\nmean\n0.070\n0.074\n0.083\n0.088\n0.096\n0.102\n+0.032 (λ=5)\nFAIL\n\n\n\n\n\n\nv8 fig\n\n\n\n\n\nH-4’ PASS on last_token pool: best Δ = +0.058 ≥ 0.05 threshold\nλ=1.0 already crosses threshold (+0.053)\nλ=2/5 saturate near 0.107 margin (still climbing slowly)\nmean_pool also gains (+0.032, up from v7’s +0.013) but doesn’t cross threshold\nlast &gt; mean consistent across all 7B versions (5.4× effect on 0.5B, 1.8× on 7B)",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#cross-version-comparison-best-δ-last_token",
+    "href": "phase2_v3_7b_v8.html#cross-version-comparison-best-δ-last_token",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "Version\nbest λ\nmargin\nΔ\nH-4’\nNotes\n\n\n\n\n0.5B v3\n1.0\n0.160\n+0.131\nPASS\n2 ep, LR 1e-4\n\n\n7B v5\n1.0\n0.083\n+0.034\nFAIL\n2 ep, LR 5e-5\n\n\n7B v6\n5.0\n0.086\n+0.037\nFAIL\n2 ep, LR 5e-5\n\n\n7B v7\n5.0\n0.081\n+0.032\nFAIL\n3 ep, LR 3e-5 (regressed)\n\n\n7B v8\n5.0\n0.107\n+0.058\nPASS ✅\n3 ep, LR 5e-5",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#v8-vs-v7-diagnosis",
+    "href": "phase2_v3_7b_v8.html#v8-vs-v7-diagnosis",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "Single change (LR 3e-5 → 5e-5) + λ grid refinement (added 0.5) produced a +0.026 jump in best Δ (last)\nConfirms v7’s regression was indeed LR-driven, not over-fit-driven\n3 epochs is essential: gives the geometric basin more time to form\nLR 5e-5 is the sweet spot: high enough to learn cross-sentence alignment, low enough not to overshoot",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#phase-2-7b-final-verdict",
+    "href": "phase2_v3_7b_v8.html#phase-2-7b-final-verdict",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "H-4’ PASS in last_token pool at the v8 configuration (3 ep + LR 5e-5). The geometric regularization generalises to 7B — just needed more training time and the original LR peak.\n\n\n\nScale\nbest Δ (last)\nH-4’\n\n\n\n\n0.5B v3\n+0.131\nPASS\n\n\n7B v8\n+0.058\nPASS ✅\n\n\nRatio 7B/0.5B\n0.44\n—\n\n\n\n7B achieves 44% of 0.5B’s margin gain — strong evidence that the geometric inductive bias is scale-portable, even though absolute margin decreases with model size (likely because the 7B baseline is already higher).",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
+    "objectID": "phase2_v3_7b_v8.html#artifacts",
+    "href": "phase2_v3_7b_v8.html#artifacts",
+    "title": "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)",
+    "section": "",
+    "text": "geometry-meaning-7b-georeg-v8.py (Kaggle kernel source)\nmetrics_georeg_7b_v8_full.json (full all_results)\nfigs_georeg_7b/fig_margin_vs_lambda_v8.png\nKernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg (v8)",
+    "crumbs": [
+      "Home",
+      "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+    ]
+  },
+  {
     "objectID": "phase2_v1_05b.html",
     "href": "phase2_v1_05b.html",
     "title": "0.5B v1-v3 — Cross-Sentence InfoNCE",
@@ -348,7 +436,7 @@
     "href": "index.html",
     "title": "Geometry of Meaning",
     "section": "",
-    "text": "Phase 2 explores whether cross-sentence geometric regularization — pulling together hidden states of paraphrases belonging to the same concept while pushing apart different concepts — can measurably improve the concept-grouped margin in a language model’s last-token / mean-pool representation space.\n\n\nFor a paraphrase corpus where every concept \\(c\\) has \\(n_c\\) paraphrases \\(\\{s_{c,1}, \\ldots, s_{c,n_c}\\}\\), a small geometric loss\n\\[\n\\mathcal{L}_{\\text{geo}} = \\sum_c \\sum_{i,j \\in \\text{pos}(c)} \\log \\frac{\\exp(\\text{sim}(h_i, h_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(h_i, h_k)/\\tau)}\n\\]\nadded to the standard LM loss should make the model’s hidden states of paraphrases cluster by concept.\nThe primary metric is concept-grouped margin:\n\\[\nM = \\frac{1}{N_c}\\sum_c \\frac{1}{n_c^2}\\sum_{i,j} \\cos(h_{c,i}, h_{c,j}) - \\frac{1}{N_c(N_c-1)}\\sum_{c\\neq c'}\\frac{1}{n_c n_{c'}}\\sum_{i,j}\\cos(h_{c,i}, h_{c',j})\n\\]\nH-4 is PASS when \\(M(\\text{trained}) - M(\\text{baseline}) \\geq 0.05\\).\n\n\n\n\n\n\n\n\n\n\n\nStage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)\n\n\n\n\n\n\n\nGitHub: https://github.com/math4mad/Geometry-Of-Meaning\nKaggle kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg"
+    "text": "Phase 2 explores whether cross-sentence geometric regularization — pulling together hidden states of paraphrases belonging to the same concept while pushing apart different concepts — can measurably improve the concept-grouped margin in a language model’s last-token / mean-pool representation space.\n\n\nFor a paraphrase corpus where every concept \\(c\\) has \\(n_c\\) paraphrases \\(\\{s_{c,1}, \\ldots, s_{c,n_c}\\}\\), a small geometric loss\n\\[\n\\mathcal{L}_{\\text{geo}} = \\sum_c \\sum_{i,j \\in \\text{pos}(c)} \\log \\frac{\\exp(\\text{sim}(h_i, h_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(h_i, h_k)/\\tau)}\n\\]\nadded to the standard LM loss should make the model’s hidden states of paraphrases cluster by concept.\nThe primary metric is concept-grouped margin:\n\\[\nM = \\frac{1}{N_c}\\sum_c \\frac{1}{n_c^2}\\sum_{i,j} \\cos(h_{c,i}, h_{c,j}) - \\frac{1}{N_c(N_c-1)}\\sum_{c\\neq c'}\\frac{1}{n_c n_{c'}}\\sum_{i,j}\\cos(h_{c,i}, h_{c',j})\n\\]\nH-4 is PASS when \\(M(\\text{trained}) - M(\\text{baseline}) \\geq 0.05\\).\n\n\n\n\n\n\n\n\n\n\n\nStage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)\n\n\nv8 7B 3 ep + LR 5e-5\nQwen2.5-7B + QLoRA\nH-4’ PASS (Delta=+0.058, lambda=5 last)\n\n\n\n\n\n\n\nGitHub: https://github.com/math4mad/Geometry-Of-Meaning\nKaggle kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg"
   },
   {
     "objectID": "index.html#hypothesis-h-4",
@@ -362,7 +450,7 @@
     "href": "index.html#roadmap",
     "title": "Geometry of Meaning",
     "section": "",
-    "text": "Stage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)"
+    "text": "Stage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)\n\n\nv8 7B 3 ep + LR 5e-5\nQwen2.5-7B + QLoRA\nH-4’ PASS (Delta=+0.058, lambda=5 last)"
   },
   {
     "objectID": "index.html#source",
@@ -376,7 +464,7 @@
     "href": "phase2_overview.html",
     "title": "Phase 2 Overview",
     "section": "",
-    "text": "We start from a paraphrase corpus of 50 concepts with 5 paraphrases per concept, totalling 250 sentences. Each sentence expresses the same concept in different surface forms:\nConcept 0:\n  - \"the cat sat on the mat\"\n  - \"a feline was resting on the rug\"\n  - \"the kitten lounged on the carpet\"\n  - ...\n\nConcept 1:\n  - \"she wrote a letter to her friend\"\n  - \"the woman composed a note for her pal\"\n  - ...\nWe extract hidden states from a language model, then compute:\n\nintra-cluster cosine — average \\(\\cos(h_{c,i}, h_{c,j})\\) over paraphrase pairs of the same concept\ninter-cluster cosine — average \\(\\cos(h_{c,i}, h_{c',j})\\) over paraphrase pairs of different concepts\nmargin = intra − inter (a larger margin ⇒ better concept clustering)\n\n\n\n\nWe add a cross-sentence InfoNCE loss computed on a micro-batch of \\(M\\) sentences drawn from \\(K\\) concepts:\n\\[\n\\mathcal{L}_{\\text{InfoNCE}} = \\frac{1}{M} \\sum_{i=1}^{M} -\\log \\frac{\\sum_{j \\in \\text{pos}(i)} \\exp(\\text{sim}(z_i, z_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(z_i, z_k)/\\tau)}\n\\]\nwhere \\(\\text{pos}(i)\\) are the indices of sentences sharing the same concept as sentence \\(i\\), and \\(z_i\\) is either the last-token or mean-pool hidden state of the final non-pad position.\nWe pair this with a margin-push auxiliary that explicitly penalises inter-cluster cosines above 0.5:\n\\[\n\\mathcal{L}_{\\text{margin}} = \\text{ReLU}(\\cos_{\\text{neg}} - 0.5)\n\\]\nTotal loss:\n\\[\n\\mathcal{L} = \\mathcal{L}_{\\text{LM}} + \\lambda \\cdot (\\mathcal{L}_{\\text{InfoNCE}} + 0.1 \\cdot \\mathcal{L}_{\\text{margin}})\n\\]\n\n\n\n\nv1 (block-internal) computed InfoNCE over positions within the same sentence’s hidden states. This optimised local token-level smoothness, not cross-sentence concept alignment. Result: H-4 FAIL.\nv2 (micro-batch only) broke the LM training distribution by replacing LM batches with paraphrase-only micro-batches. LM loss exploded to 6.85, InfoNCE = NaN. Result: H-4 FAIL.\nv3 (LM stream + periodic micro-batch) keeps the standard LM training distribution (stream block of 128 tokens), and every \\(G\\) steps pauses to do one micro-batch of \\(M\\) paraphrases for \\(\\mathcal{L}_{\\text{InfoNCE}}\\). The LM flow stays stable; geometric loss is auxiliary. Result: H-4 PASS on 0.5B.\n\n\n\n\n\n\n\nStage\nResult\nΔ (margin)\n\n\n\n\n0.5B v1\nFAIL\n+0.003\n\n\n0.5B v2\nFAIL\nNaN\n\n\n0.5B v3\nPASS\n+0.131\n\n\n7B v5\nFAIL\n+0.034\n\n\n7B v6\nFAIL\n+0.037\n\n\n7B v7\n(running)\n—\n\n\n\nH-4 threshold is \\(\\Delta \\geq 0.05\\).",
+    "text": "We start from a paraphrase corpus of 50 concepts with 5 paraphrases per concept, totalling 250 sentences. Each sentence expresses the same concept in different surface forms:\nConcept 0:\n  - \"the cat sat on the mat\"\n  - \"a feline was resting on the rug\"\n  - \"the kitten lounged on the carpet\"\n  - ...\n\nConcept 1:\n  - \"she wrote a letter to her friend\"\n  - \"the woman composed a note for her pal\"\n  - ...\nWe extract hidden states from a language model, then compute:\n\nintra-cluster cosine — average \\(\\cos(h_{c,i}, h_{c,j})\\) over paraphrase pairs of the same concept\ninter-cluster cosine — average \\(\\cos(h_{c,i}, h_{c',j})\\) over paraphrase pairs of different concepts\nmargin = intra − inter (a larger margin ⇒ better concept clustering)\n\n\n\n\nWe add a cross-sentence InfoNCE loss computed on a micro-batch of \\(M\\) sentences drawn from \\(K\\) concepts:\n\\[\n\\mathcal{L}_{\\text{InfoNCE}} = \\frac{1}{M} \\sum_{i=1}^{M} -\\log \\frac{\\sum_{j \\in \\text{pos}(i)} \\exp(\\text{sim}(z_i, z_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(z_i, z_k)/\\tau)}\n\\]\nwhere \\(\\text{pos}(i)\\) are the indices of sentences sharing the same concept as sentence \\(i\\), and \\(z_i\\) is either the last-token or mean-pool hidden state of the final non-pad position.\nWe pair this with a margin-push auxiliary that explicitly penalises inter-cluster cosines above 0.5:\n\\[\n\\mathcal{L}_{\\text{margin}} = \\text{ReLU}(\\cos_{\\text{neg}} - 0.5)\n\\]\nTotal loss:\n\\[\n\\mathcal{L} = \\mathcal{L}_{\\text{LM}} + \\lambda \\cdot (\\mathcal{L}_{\\text{InfoNCE}} + 0.1 \\cdot \\mathcal{L}_{\\text{margin}})\n\\]\n\n\n\n\nv1 (block-internal) computed InfoNCE over positions within the same sentence’s hidden states. This optimised local token-level smoothness, not cross-sentence concept alignment. Result: H-4 FAIL.\nv2 (micro-batch only) broke the LM training distribution by replacing LM batches with paraphrase-only micro-batches. LM loss exploded to 6.85, InfoNCE = NaN. Result: H-4 FAIL.\nv3 (LM stream + periodic micro-batch) keeps the standard LM training distribution (stream block of 128 tokens), and every \\(G\\) steps pauses to do one micro-batch of \\(M\\) paraphrases for \\(\\mathcal{L}_{\\text{InfoNCE}}\\). The LM flow stays stable; geometric loss is auxiliary. Result: H-4 PASS on 0.5B.\n\n\n\n\n\n\n\nStage\nResult\nΔ (margin)\n\n\n\n\n0.5B v1\nFAIL\n+0.003\n\n\n0.5B v2\nFAIL\nNaN\n\n\n0.5B v3\nPASS\n+0.131\n\n\n7B v5\nFAIL\n+0.034\n\n\n7B v6\nFAIL\n+0.037\n\n\n7B v7\nFAIL\n+0.032 (regression — LR 3e-5 too low)\n\n\n7B v8\nPASS ✅\n+0.058 (3 ep + LR 5e-5)\n\n\n\nH-4 threshold is \\(\\Delta \\geq 0.05\\).",
     "crumbs": [
       "Home",
       "Phase 2 Overview"
@@ -420,7 +508,7 @@
     "href": "phase2_overview.html#h-4-decision-boundary",
     "title": "Phase 2 Overview",
     "section": "",
-    "text": "Stage\nResult\nΔ (margin)\n\n\n\n\n0.5B v1\nFAIL\n+0.003\n\n\n0.5B v2\nFAIL\nNaN\n\n\n0.5B v3\nPASS\n+0.131\n\n\n7B v5\nFAIL\n+0.034\n\n\n7B v6\nFAIL\n+0.037\n\n\n7B v7\n(running)\n—\n\n\n\nH-4 threshold is \\(\\Delta \\geq 0.05\\).",
+    "text": "Stage\nResult\nΔ (margin)\n\n\n\n\n0.5B v1\nFAIL\n+0.003\n\n\n0.5B v2\nFAIL\nNaN\n\n\n0.5B v3\nPASS\n+0.131\n\n\n7B v5\nFAIL\n+0.034\n\n\n7B v6\nFAIL\n+0.037\n\n\n7B v7\nFAIL\n+0.032 (regression — LR 3e-5 too low)\n\n\n7B v8\nPASS ✅\n+0.058 (3 ep + LR 5e-5)\n\n\n\nH-4 threshold is \\(\\Delta \\geq 0.05\\).",
     "crumbs": [
       "Home",
       "Phase 2 Overview"

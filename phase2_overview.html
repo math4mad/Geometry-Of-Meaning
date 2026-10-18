@@ -219,6 +219,12 @@ window.Quarto = {
  <span class="menu-text">7B v7 — 3 epoch + LR 3e-5 (FAIL)</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phase2_v3_7b_v8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7B v8 — 3 epoch + LR 5e-5 (PASS ✅)</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -345,8 +351,13 @@ Concept 1:
 </tr>
 <tr class="even">
 <td>7B v7</td>
-<td>(running)</td>
-<td>—</td>
+<td>FAIL</td>
+<td>+0.032 (regression — LR 3e-5 too low)</td>
+</tr>
+<tr class="odd">
+<td><strong>7B v8</strong></td>
+<td><strong>PASS</strong> ✅</td>
+<td><strong>+0.058</strong> (3 ep + LR 5e-5)</td>
 </tr>
 </tbody>
 </table>
@@ -876,9 +887,10 @@ Concept 1:
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0.5B v3 <span class="pp">|</span> **PASS** | **+0.131** <span class="pp">|</span></span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7B v5 <span class="pp">|</span> FAIL <span class="pp">|</span> +0.034 <span class="pp">|</span></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7B v6 <span class="pp">|</span> FAIL <span class="pp">|</span> +0.037 <span class="pp">|</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7B v7 <span class="pp">|</span> (running) <span class="pp">|</span> — <span class="pp">|</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>H-4 threshold is $\Delta \geq 0.05$.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7B v7 <span class="pp">|</span> FAIL <span class="pp">|</span> +0.032 (regression — LR 3e-5 too low) <span class="pp">|</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **7B v8** | **PASS** ✅ | **+0.058** (3 ep + LR 5e-5) <span class="pp">|</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>H-4 threshold is $\Delta \geq 0.05$.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

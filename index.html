@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-18">
+<meta name="dcterms.date" content="2026-10-19">
 
 <title>Geometry of Meaning</title>
 <style>
@@ -221,6 +221,12 @@ window.Quarto = {
  <span class="menu-text">7B v7 — 3 epoch + LR 3e-5 (FAIL)</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phase2_v3_7b_v8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7B v8 — 3 epoch + LR 5e-5 (PASS ✅)</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -244,14 +250,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 18, 2026</p>
+      <p class="date">October 19, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 18, 2026</p>
+      <p class="date-modified">October 19, 2026</p>
     </div>
   </div>
     
@@ -328,6 +334,11 @@ M = \frac{1}{N_c}\sum_c \frac{1}{n_c^2}\sum_{i,j} \cos(h_{c,i}, h_{c,j}) - \frac
 <td><strong>v7</strong> 7B 3 ep + LR 3e-5</td>
 <td>Qwen2.5-7B + QLoRA</td>
 <td>H-4-prime FAIL (Delta=+0.032)</td>
+</tr>
+<tr class="even">
+<td><strong>v8</strong> 7B 3 ep + LR 5e-5</td>
+<td>Qwen2.5-7B + QLoRA</td>
+<td><strong>H-4’ PASS</strong> (Delta=+0.058, lambda=5 last)</td>
 </tr>
 </tbody>
 </table>
@@ -843,11 +854,12 @@ M = \frac{1}{N_c}\sum_c \frac{1}{n_c^2}\sum_{i,j} \cos(h_{c,i}, h_{c,j}) - \frac
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v5** 7B 4 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.034, λ=1) <span class="pp">|</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v6** 7B 5 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.037, λ=5 last) <span class="pp">|</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v7** 7B 3 ep + LR 3e-5 <span class="pp">|</span> Qwen2.5-7B + QLoRA <span class="pp">|</span> H-4-prime FAIL (Delta=+0.032) <span class="pp">|</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GitHub: <span class="ot">&lt;https://github.com/math4mad/Geometry-Of-Meaning&gt;</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kaggle kernel: <span class="ot">&lt;https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v8** 7B 3 ep + LR 5e-5 | Qwen2.5-7B + QLoRA | **H-4' PASS** (Delta=+0.058, lambda=5 last) <span class="pp">|</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GitHub: <span class="ot">&lt;https://github.com/math4mad/Geometry-Of-Meaning&gt;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kaggle kernel: <span class="ot">&lt;https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

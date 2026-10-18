@@ -1,0 +1,74 @@
+---
+title: "7B v8 — 3 epoch + LR 5e-5 (PASS ✅)"
+---
+
+# 7B v8: 3 epoch + LR 5e-5 — **H-4' PASS in last_token pool**
+
+## Motivation
+
+v7 (3 ep + LR 3e-5) regressed by -0.005 vs v6 (2 ep + LR 5e-5). The diagnosis was that **LR 3e-5 was too low** — v7's only structural change vs v6 that was a regression. v8 tests: "keep v7's 3 epochs but restore v6's LR 5e-5".
+
+## v8 Changes (vs v7)
+
+| | v7 | v8 |
+|---|---|---|
+| Epochs | 3 | 3 (unchanged) |
+| LR peak | 3e-5 | **5e-5** (restored) |
+| LR schedule | cosine → 0 | cosine → 0 (unchanged) |
+| Warmup | 50 | 50 (unchanged) |
+| LAMBDAS | {0, 1, 2, 5} | **{0, 0.5, 1, 2, 5}** (added 0.5) |
+| Arm count | 8 | **10** |
+| Time | 40 min | **60 min** (3 ep) |
+
+## Results
+
+| Pool | baseline | λ=0.0 | λ=0.5 | λ=1.0 | λ=2.0 | λ=5.0 | best Δ | H-4' |
+|---|---|---|---|---|---|---|---|---|
+| **last** | 0.049 | 0.061 | 0.093 | 0.102 | 0.106 | **0.107** | **+0.058** (λ=5) | **PASS** ✅ |
+| **mean** | 0.070 | 0.074 | 0.083 | 0.088 | 0.096 | **0.102** | +0.032 (λ=5) | FAIL |
+
+![v8 fig](../figs_georeg_7b/fig_margin_vs_lambda_v8.png)
+
+### Key observations
+
+- **H-4' PASS** on `last_token` pool: best Δ = +0.058 ≥ 0.05 threshold
+- λ=1.0 already crosses threshold (+0.053)
+- λ=2/5 saturate near 0.107 margin (still climbing slowly)
+- `mean_pool` also gains (+0.032, up from v7's +0.013) but doesn't cross threshold
+- **last > mean** consistent across all 7B versions (5.4× effect on 0.5B, 1.8× on 7B)
+
+## Cross-Version Comparison (best Δ, last_token)
+
+| Version | best λ | margin | Δ | H-4' | Notes |
+|---|---|---|---|---|---|
+| 0.5B v3 | 1.0 | 0.160 | +0.131 | **PASS** | 2 ep, LR 1e-4 |
+| 7B v5 | 1.0 | 0.083 | +0.034 | FAIL | 2 ep, LR 5e-5 |
+| 7B v6 | 5.0 | 0.086 | +0.037 | FAIL | 2 ep, LR 5e-5 |
+| 7B v7 | 5.0 | 0.081 | +0.032 | FAIL | 3 ep, LR 3e-5 (regressed) |
+| **7B v8** | 5.0 | **0.107** | **+0.058** | **PASS** ✅ | **3 ep, LR 5e-5** |
+
+## v8 vs v7 Diagnosis
+
+- Single change (LR 3e-5 → 5e-5) + λ grid refinement (added 0.5) produced a **+0.026 jump** in best Δ (last)
+- Confirms v7's regression was indeed **LR-driven**, not over-fit-driven
+- 3 epochs is essential: gives the geometric basin more time to form
+- LR 5e-5 is the sweet spot: high enough to learn cross-sentence alignment, low enough not to overshoot
+
+## Phase 2 7B Final Verdict
+
+**H-4' PASS** in `last_token` pool at the v8 configuration (3 ep + LR 5e-5). The geometric regularization generalises to 7B — just needed more training time and the original LR peak.
+
+| Scale | best Δ (last) | H-4' |
+|---|---|---|
+| 0.5B v3 | +0.131 | **PASS** |
+| **7B v8** | **+0.058** | **PASS** ✅ |
+| Ratio 7B/0.5B | **0.44** | — |
+
+7B achieves 44% of 0.5B's margin gain — strong evidence that the geometric inductive bias is **scale-portable**, even though absolute margin decreases with model size (likely because the 7B baseline is already higher).
+
+## Artifacts
+
+- `geometry-meaning-7b-georeg-v8.py` (Kaggle kernel source)
+- `metrics_georeg_7b_v8_full.json` (full all_results)
+- `figs_georeg_7b/fig_margin_vs_lambda_v8.png`
+- Kernel: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg> (v8)

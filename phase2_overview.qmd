@@ -64,6 +64,7 @@ $$
 | 0.5B v3 | **PASS** | **+0.131** |
 | 7B v5 | FAIL | +0.034 |
 | 7B v6 | FAIL | +0.037 |
-| 7B v7 | (running) | — |
+| 7B v7 | FAIL | +0.032 (regression — LR 3e-5 too low) |
+| **7B v8** | **PASS** ✅ | **+0.058** (3 ep + LR 5e-5) |
 
 H-4 threshold is $\Delta \geq 0.05$.

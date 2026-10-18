@@ -18,6 +18,7 @@ website:
       - phase2_v2_7b_v5.qmd
       - phase2_v2_7b_v6.qmd
       - phase2_v3_7b_v7.qmd
+      - phase2_v3_7b_v8.qmd
     collapse-level: 2
 
 format:

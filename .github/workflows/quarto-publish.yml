@@ -53,6 +53,7 @@ jobs:
       - name: Render Quarto to docs/
         run: |
           quarto render report_geometry_of_meaning.qmd --to html --output-dir docs --output index.html
+          quarto render report_geometry_of_meaning_7b.qmd --to html --output-dir docs/7b --output index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

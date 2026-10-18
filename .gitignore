@@ -23,3 +23,4 @@ docs/
 *.html
 *_files/
 !figs_*/*.png
+external/

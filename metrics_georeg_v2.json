@@ -1,0 +1,179 @@
+{
+ "minted": "2026-10-18",
+ "arm": "geometry-meaning-phase2-georeg-v2-0.5b-poc",
+ "model": "Qwen2.5-0.5B-Instruct + LoRA(r=16, α=32)",
+ "loss_form": "L_LM + lambda * InfoNCE(cross-sentence, tau=0.07) + 0.1*margin_push",
+ "BATCH": 4,
+ "STEPS_PER_EP": 80,
+ "TAU": 0.07,
+ "lr": 0.0001,
+ "epochs": 2,
+ "lambdas": [
+  0.0,
+  0.05,
+  0.2,
+  1.0
+ ],
+ "pools": [
+  "last",
+  "mean"
+ ],
+ "results": {
+  "pools": [
+   "last",
+   "mean"
+  ],
+  "lambdas": [
+   0.0,
+   0.05,
+   0.2,
+   1.0
+  ],
+  "epochs": 2,
+  "lr": 0.0001,
+  "BATCH": 4,
+  "STEPS_PER_EP": 80,
+  "TAU": 0.07,
+  "last": {
+   "baseline": {
+    "pos": 0.9545341185728708,
+    "neg": 0.9250276697309394,
+    "margin": 0.029506448841931432
+   },
+   "lambda_0.0": {
+    "lambd": 0.0,
+    "pos": 0.9784441806872686,
+    "neg": 0.9522835593474539,
+    "margin": 0.02616062133981467,
+    "losses_lm": [
+     6.850260221041166,
+     4.371451506247888
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   },
+   "lambda_0.05": {
+    "lambd": 0.05,
+    "pos": 0.9784069099028905,
+    "neg": 0.9522781099143781,
+    "margin": 0.026128799988512363,
+    "losses_lm": [
+     6.850085551922138,
+     4.370790041410006
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   },
+   "lambda_0.2": {
+    "lambd": 0.2,
+    "pos": 0.9783832939465841,
+    "neg": 0.952174375872863,
+    "margin": 0.026208918073721055,
+    "losses_lm": [
+     6.850982739375188,
+     4.368006082681509
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   },
+   "lambda_1.0": {
+    "lambd": 1.0,
+    "pos": 0.978000111579895,
+    "neg": 0.9515239906938453,
+    "margin": 0.02647612088604967,
+    "losses_lm": [
+     6.8506496502802925,
+     4.367417977406428
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   }
+  },
+  "mean": {
+   "baseline": {
+    "pos": 0.9621790188550949,
+    "neg": 0.9195805769217642,
+    "margin": 0.04259844193333073
+   },
+   "lambda_0.0": {
+    "lambd": 0.0,
+    "pos": 0.9766824591159821,
+    "neg": 0.9418835693284084,
+    "margin": 0.03479888978757362,
+    "losses_lm": [
+     6.850260221041166,
+     4.371451506247888
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   },
+   "lambda_0.05": {
+    "lambd": 0.05,
+    "pos": 0.9766771936416626,
+    "neg": 0.9418736009221328,
+    "margin": 0.03480359271952982,
+    "losses_lm": [
+     6.850234288435716,
+     4.370195608872634
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   },
+   "lambda_0.2": {
+    "lambd": 0.2,
+    "pos": 0.9766318211952846,
+    "neg": 0.9418160272272009,
+    "margin": 0.03481579396808365,
+    "losses_lm": [
+     6.849536565633921,
+     4.371035759265606
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   },
+   "lambda_1.0": {
+    "lambd": 1.0,
+    "pos": 0.9764767712354661,
+    "neg": 0.9414609573389354,
+    "margin": 0.035015813896530634,
+    "losses_lm": [
+     6.850475861476018,
+     4.368450568272517
+    ],
+    "losses_info_nce": [
+     NaN,
+     NaN
+    ]
+   }
+  }
+ },
+ "H4": {
+  "last": {
+   "best_lambda": 1.0,
+   "best_margin": 0.02647612088604967,
+   "delta": -0.003030327955881762,
+   "pass": false
+  },
+  "mean": {
+   "best_lambda": 1.0,
+   "best_margin": 0.035015813896530634,
+   "delta": -0.007582628036800099,
+   "pass": false
+  }
+ },
+ "verdict": "geometric regularization does not help at 0.5B v2"
+}

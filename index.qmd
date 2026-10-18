@@ -1,0 +1,51 @@
+---
+title: "Geometry of Meaning"
+subtitle: "Phase 2 — Geometric Regularization for Concept-Aligned Hidden States"
+date: today
+date-modified: today
+format:
+  html:
+    toc: false
+    include-in-header:
+      - text: |
+          <meta name="description" content="Phase 2 PoC for Qwen2.5: cross-sentence InfoNCE geometric regularization on concept-grouped paraphrases.">
+---
+
+# Geometry of Meaning
+
+**Phase 2** explores whether cross-sentence geometric regularization — pulling together hidden states of paraphrases belonging to the same concept while pushing apart different concepts — can measurably improve the *concept-grouped margin* in a language model's last-token / mean-pool representation space.
+
+## Hypothesis (H-4)
+
+For a paraphrase corpus where every concept $c$ has $n_c$ paraphrases $\{s_{c,1}, \ldots, s_{c,n_c}\}$, a small geometric loss
+
+$$
+\mathcal{L}_{\text{geo}} = \sum_c \sum_{i,j \in \text{pos}(c)} \log \frac{\exp(\text{sim}(h_i, h_j)/\tau)}{\sum_{k \neq i} \exp(\text{sim}(h_i, h_k)/\tau)}
+$$
+
+added to the standard LM loss should make the model's hidden states of paraphrases cluster by concept.
+
+The primary metric is **concept-grouped margin**:
+
+$$
+M = \frac{1}{N_c}\sum_c \frac{1}{n_c^2}\sum_{i,j} \cos(h_{c,i}, h_{c,j}) - \frac{1}{N_c(N_c-1)}\sum_{c\neq c'}\frac{1}{n_c n_{c'}}\sum_{i,j}\cos(h_{c,i}, h_{c',j})
+$$
+
+H-4 is **PASS** when $M(\text{trained}) - M(\text{baseline}) \geq 0.05$.
+
+## Roadmap
+
+| Stage | Model | Result |
+|---|---|---|
+| **v1** 0.5B block-internal geo loss | Qwen2.5-0.5B + LoRA | H-4 **FAIL** (Δ=+0.003) |
+| **v2** 0.5B micro-batch only | Qwen2.5-0.5B + LoRA | H-4 **FAIL** (NaN) |
+| **v3** 0.5B LM-stream + InfoNCE | Qwen2.5-0.5B + LoRA | H-4 **PASS** (Δ=+0.131, λ=1) |
+| **v4** 7B baseline + 3 arms | Qwen2.5-7B + QLoRA | (killed by OOM) |
+| **v5** 7B 4 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.034, λ=1) |
+| **v6** 7B 5 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.037, λ=5 last) |
+| **v7** 7B 3 ep + LR 3e-5 | Qwen2.5-7B + QLoRA | pending |
+
+## Source
+
+- GitHub: <https://github.com/math4mad/Geometry-Of-Meaning>
+- Kaggle kernel: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg>

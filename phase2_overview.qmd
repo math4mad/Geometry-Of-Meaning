@@ -1,0 +1,69 @@
+---
+title: "Phase 2 Overview"
+---
+
+# Phase 2 — Geometric Regularization for Concept-Aligned Hidden States
+
+## The Setting
+
+We start from a paraphrase corpus of **50 concepts** with **5 paraphrases per concept**, totalling **250 sentences**. Each sentence expresses the same concept in different surface forms:
+
+```
+Concept 0:
+  - "the cat sat on the mat"
+  - "a feline was resting on the rug"
+  - "the kitten lounged on the carpet"
+  - ...
+
+Concept 1:
+  - "she wrote a letter to her friend"
+  - "the woman composed a note for her pal"
+  - ...
+```
+
+We extract hidden states from a language model, then compute:
+
+- **intra-cluster cosine** — average $\cos(h_{c,i}, h_{c,j})$ over paraphrase pairs of the same concept
+- **inter-cluster cosine** — average $\cos(h_{c,i}, h_{c',j})$ over paraphrase pairs of *different* concepts
+- **margin** = intra − inter (a larger margin ⇒ better concept clustering)
+
+## The Loss
+
+We add a **cross-sentence InfoNCE** loss computed on a micro-batch of $M$ sentences drawn from $K$ concepts:
+
+$$
+\mathcal{L}_{\text{InfoNCE}} = \frac{1}{M} \sum_{i=1}^{M} -\log \frac{\sum_{j \in \text{pos}(i)} \exp(\text{sim}(z_i, z_j)/\tau)}{\sum_{k \neq i} \exp(\text{sim}(z_i, z_k)/\tau)}
+$$
+
+where $\text{pos}(i)$ are the indices of sentences sharing the same concept as sentence $i$, and $z_i$ is either the last-token or mean-pool hidden state of the *final non-pad position*.
+
+We pair this with a **margin-push auxiliary** that explicitly penalises inter-cluster cosines above 0.5:
+
+$$
+\mathcal{L}_{\text{margin}} = \text{ReLU}(\cos_{\text{neg}} - 0.5)
+$$
+
+Total loss:
+
+$$
+\mathcal{L} = \mathcal{L}_{\text{LM}} + \lambda \cdot (\mathcal{L}_{\text{InfoNCE}} + 0.1 \cdot \mathcal{L}_{\text{margin}})
+$$
+
+## Why this design (vs failed v1 / v2)
+
+- **v1 (block-internal)** computed InfoNCE over *positions within the same sentence's hidden states*. This optimised local token-level smoothness, not cross-sentence concept alignment. Result: H-4 FAIL.
+- **v2 (micro-batch only)** broke the LM training distribution by replacing LM batches with paraphrase-only micro-batches. LM loss exploded to 6.85, InfoNCE = NaN. Result: H-4 FAIL.
+- **v3 (LM stream + periodic micro-batch)** keeps the standard LM training distribution (stream block of 128 tokens), and every $G$ steps pauses to do one micro-batch of $M$ paraphrases for $\mathcal{L}_{\text{InfoNCE}}$. The LM flow stays stable; geometric loss is auxiliary. Result: H-4 **PASS** on 0.5B.
+
+## H-4 Decision Boundary
+
+| Stage | Result | Δ (margin) |
+|---|---|---|
+| 0.5B v1 | FAIL | +0.003 |
+| 0.5B v2 | FAIL | NaN |
+| 0.5B v3 | **PASS** | **+0.131** |
+| 7B v5 | FAIL | +0.034 |
+| 7B v6 | FAIL | +0.037 |
+| 7B v7 | (running) | — |
+
+H-4 threshold is $\Delta \geq 0.05$.

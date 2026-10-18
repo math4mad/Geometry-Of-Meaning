@@ -24,3 +24,6 @@ docs/
 *_files/
 !figs_*/*.png
 external/
+
+/.quarto/
+**/*.quarto_ipynb

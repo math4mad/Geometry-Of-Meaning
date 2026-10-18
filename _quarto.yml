@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: _site
+  title: "Geometry of Meaning"
+
+website:
+  title: "Geometry of Meaning"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+  sidebar:
+    contents:
+      - phase2_overview.qmd
+      - phase2_v1_05b.qmd
+      - phase2_v2_7b_v5.qmd
+      - phase2_v2_7b_v6.qmd
+      - phase2_v3_7b_v7.qmd
+    collapse-level: 2
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-tools: true
+    fig-width: 8
+    fig-height: 5
+    fig-dpi: 100
+
+editor: source

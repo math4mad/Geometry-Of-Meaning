@@ -1,0 +1,35 @@
+---
+title: "About"
+---
+
+# About
+
+**Geometry of Meaning** is a research project exploring whether explicit geometric regularisation of hidden states — pulling together paraphrases of the same concept, pushing apart different concepts — can improve a language model's representation geometry, as measured by a *concept-grouped margin* metric.
+
+## Method
+
+Standard language-model fine-tuning is augmented with a small auxiliary loss:
+
+$$
+\mathcal{L}_{\text{aux}} = \mathcal{L}_{\text{InfoNCE}} + 0.1 \cdot \text{ReLU}(\cos_{\text{neg}} - 0.5)
+$$
+
+where $\mathcal{L}_{\text{InfoNCE}}$ is a temperature-scaled cross-entropy over paraphrase pairs in a small micro-batch, and the margin term explicitly penalises inter-cluster cosines above 0.5.
+
+## Stack
+
+- **Model**: Qwen2.5 family (0.5B + 7B)
+- **Adaptation**: LoRA (0.5B) / QLoRA 4-bit nf4 (7B)
+- **Hardware**: Apple Silicon MPS (0.5B), Kaggle T4 16GB (7B)
+- **Loss**: PEFT + custom cross-sentence InfoNCE
+- **Reporting**: Quarto + gh-pages
+
+## Source
+
+- GitHub: <https://github.com/math4mad/Geometry-Of-Meaning>
+- Kaggle: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg>
+
+## Authors
+
+- math4mad
+- AI collaboration: CodeBuddy IDE + qwen

@@ -1,0 +1,65 @@
+---
+title: "7B v6 — λ ∈ {0, 1, 2, 5, 10}"
+---
+
+# 7B v6: λ upper-bound expansion
+
+v5 left the door open — λ=1.0 was still rising monotonically. v6 expands the scan to {0, 1, 2, 5, 10} to find the saturation point.
+
+## Identical architecture to v5
+
+Same: Qwen2.5-7B-Instruct + QLoRA r=16 α=32 4bit, T4 16GB, 2 epochs, LR=5e-5 cosine + warmup 50, BLOCK=128, MICRO_BATCH=4, GEO_EVERY=4, InfoNCE τ=0.07.
+
+**Only change**: `LAMBDAS = [0, 1, 2, 5, 10]` (vs v5's `[0, 0.1, 0.5, 1.0]`).
+
+**Also**: v6 fixed the v5 bug where `fl("done", ...)` overwrote the complete `out` dict containing all per-arm data. The full results now save to `metrics_georeg_7b_v6_full.json`.
+
+## Results
+
+| Pool | baseline | λ=0 | λ=1 | λ=2 | λ=5 | λ=10 | best Δ | H-4' |
+|---|---|---|---|---|---|---|---|---|
+| **last** | 0.049 | 0.061 | 0.084 | 0.086 | **0.086** | 0.085 | **+0.037** (λ=5) | FAIL |
+| **mean** | 0.070 | 0.072 | 0.078 | 0.082 | 0.084 | **0.085** | **+0.015** (λ=10) | FAIL |
+
+## Saturation analysis
+
+| λ | last margin | Δ last | mean margin | Δ mean |
+|---|---|---|---|---|
+| 0 | 0.061 | +0.012 | 0.072 | +0.002 |
+| 1 | 0.084 | +0.034 | 0.078 | +0.009 |
+| 2 | 0.086 | +0.036 | 0.082 | +0.012 |
+| 5 | **0.086** | **+0.037** | 0.084 | +0.014 |
+| 10 | 0.085 | +0.036 | **0.085** | **+0.015** |
+
+- **last pool saturates at λ=2-5** — 0.0855 → 0.0861 → 0.0846 (no further gain)
+- **mean pool is still rising at λ=10** — 0.0784 → 0.0819 → 0.0838 → 0.0847
+
+## v5 → v6 delta
+
+| Pool | v5 best (λ=1) | v6 best (λ=5) | Δ improvement |
+|---|---|---|---|
+| last | +0.034 | +0.037 | **+0.003** |
+| mean | +0.009 | +0.015 | **+0.006** |
+
+v6 only added 0.003-0.006 over v5 — **expanding λ no longer pays off**.
+
+## Cross-scale final
+
+| | 0.5B v3 best | 7B v6 best | 比例 |
+|---|---|---|---|
+| Δ last | +0.131 | +0.037 | 0.28× |
+| Δ mean | +0.061 | +0.015 | 0.25× |
+
+**Geometric regularization at 7B is ~25-28% as effective as at 0.5B** (in absolute Δ).
+
+## H-4' Verdict
+
+**FAIL** — 7B geometric regularization max Δ is +0.037 (last, λ=5), below the +0.05 H-4 threshold. The trend is real and monotonic, but the *magnitude* in 7B is too small to claim H-4 PASS at this scale.
+
+## Artifacts
+
+- `geometry-meaning-7b-georeg-v6.py` (Kaggle kernel)
+- `metrics_georeg_7b_v6_full.json` (full all_results)
+- `figs_georeg_7b/fig_margin_vs_lambda_v6.png`
+- `phase2_v2_7b_v6_results.md`
+- Kernel: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg> (v6)

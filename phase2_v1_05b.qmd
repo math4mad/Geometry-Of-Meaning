@@ -1,0 +1,61 @@
+---
+title: "0.5B v1-v3 — Cross-Sentence InfoNCE"
+---
+
+# 0.5B Stage: From FAIL to PASS
+
+All 0.5B experiments use Qwen2.5-0.5B-Instruct + LoRA (r=16, α=32), MPS (Apple Silicon), 2 epochs, 50 paraphrase concepts × 5 paraphrases.
+
+## v1: Block-Internal Geo Loss — FAIL
+
+Loss design: for each sentence, take the last-layer hidden state, divide into two halves along the sequence axis, and apply InfoNCE *between the two halves*.
+
+**Why it failed**: the proxy optimises token-level smoothness *within* one sentence, not cross-sentence concept alignment. The geometric loss did decrease (0.55 → 0.49), but the concept margin collapsed:
+
+| Pool | baseline | λ=0 | λ=0.05 | λ=0.2 | λ=1.0 |
+|---|---|---|---|---|---|
+| last | 0.030 | 0.019 | 0.019 | 0.019 | 0.016 |
+| mean | 0.043 | 0.037 | 0.036 | 0.035 | 0.038 |
+
+**H-4 FAIL** on both pools.
+
+## v2: Micro-Batch Only — FAIL (NaN)
+
+Loss design: replace the LM stream entirely with paraphrase micro-batches.
+
+**Why it failed**: the LM loss exploded to 6.85 (v1 was 2.5), and InfoNCE returned NaN. The training distribution was entirely off the LM manifold.
+
+## v3: LM Stream + Periodic Cross-Sentence InfoNCE — **PASS**
+
+Loss design: keep the LM stream block (128 tokens, standard causal LM), and every $G=4$ LM steps pause to do one cross-sentence micro-batch:
+
+- **$K=4$ concepts** drawn from the 50
+- **2 concepts** have 2 paraphrases each (provides 1 positive pair per concept)
+- **2 concepts** have 1 paraphrase each (negative-only contribution)
+- Total: **6 sentences**, **2 positive pairs**, 12 inter-concept negative pairs
+
+```
+H-4 result:
+                last_token   mean_pool
+baseline          0.0295       0.0426
+λ=0 (LoRA only)   0.0194       0.0371
+λ=0.05            0.0249       0.0390
+λ=0.2             0.0431       0.0453
+λ=1.0             0.1601       0.1035
+best Δ           +0.131 PASS  +0.061 PASS
+```
+
+InfoNCE dropped from 1.26 → 0.70 across 2 epochs (λ=1, last_token), confirming the proxy loss is genuinely training the alignment.
+
+## Diagnostic
+
+**Why v3 worked where v1 didn't**: the cross-sentence positive pairs are *the same concept in different surface forms* — exactly the alignment we want. v1's "positive pairs" were two halves of *the same sentence* — a totally different signal.
+
+**Why v3 worked where v2 didn't**: keeping the LM stream maintains the language modelling gradient; v2's pure-paraphrase batches stranded the model off-distribution.
+
+## Artifacts
+
+- `train_georeg_v3.py` — reproducible
+- `metrics_georeg_v3.json` — full 8-arm data
+- `figs_georeg_v3/fig_margin_vs_lambda.png` — λ vs margin
+- `figs_georeg_v3/fig_info_nce.png` — InfoNCE curve

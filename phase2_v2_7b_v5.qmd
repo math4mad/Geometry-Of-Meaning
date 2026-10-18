@@ -1,0 +1,58 @@
+---
+title: "7B v5 — 4 λ × 2 pool baseline"
+---
+
+# 7B Stage v5: QLoRA + 4 λ × 2 pool
+
+Model: Qwen2.5-7B-Instruct + QLoRA (4-bit nf4, r=16, α=32, bf16 compute).  
+Hardware: Kaggle T4 16GB.  
+Loss: identical to 0.5B v3 (LM stream block 128 + every 4 steps cross-sentence InfoNCE on 6-sentence micro-batch).  
+Hyper-parameters: 2 epochs, LR=5e-5 with cosine decay + warmup 50.
+
+## Setup Notes
+
+- The 7B base model is loaded as a 4-bit NF4 quantised model; the LoRA adapters are kept in bf16.
+- Gradient checkpointing is enabled to fit activations in 16GB.
+- A `lm_loss_ratio_limit = 1.5` aborts an arm if its epoch-2 LM loss is more than 50% above epoch-1 (catastrophic forgetting).
+- The `fl()` helper writes a `PARTIAL` JSON after every stage so a single arm crash still leaves recoverable state.
+
+## Results
+
+| Pool | baseline | λ=0.0 | λ=0.1 | λ=0.5 | λ=1.0 | best Δ | H-4' |
+|---|---|---|---|---|---|---|---|
+| **last** | 0.049 | 0.060 | 0.067 | 0.078 | **0.083** | **+0.034** | FAIL |
+| **mean** | 0.070 | 0.072 | 0.073 | 0.076 | 0.079 | +0.009 | FAIL |
+
+## Cross-Scale Comparison
+
+| | 0.5B v3 | 7B v5 | 比例 |
+|---|---|---|---|
+| baseline (last) | 0.030 | 0.049 | 7B 1.6× |
+| λ=1.0 margin (last) | 0.160 | 0.083 | 7B 0.52× |
+| **Δ last** | **+0.131** | **+0.034** | **7B 0.26×** |
+| **Δ mean** | **+0.061** | **+0.009** | **7B 0.15×** |
+
+## Diagnosis
+
+- **Trend matches 0.5B v3**: λ↑ margin↑, last > mean
+- **7B baseline is much higher** (0.049 vs 0.030, 0.070 vs 0.043) — headroom is reduced
+- **Δ ratio**: 7B achieves only 15-26% of the 0.5B absolute improvement
+
+## Why v5 OOM'd at λ=0.5 (and how v6 fixed it)
+
+In v4 the 7B model OOM'd at λ=0.5 in the last pool, with peak memory reaching ~15.7GB. v5 changed:
+
+- `BLOCK` 128 → 128 (kept) — block 256 was too large under grad-checkpoint
+- `MICRO_BATCH` 6 → 4 — pulled activation peak under 14GB
+- Added `gc.collect()` + `torch.cuda.empty_cache()` between arms
+- Pinned GPU 0 via `CUDA_VISIBLE_DEVICES=0`
+
+These changes let v5 finish all 8 arms in 246 s per pool (≈ 37 min total).
+
+## Artifacts
+
+- `train_georeg_7b.py`
+- `geometry-meaning-7b-georeg.py` (Kaggle kernel entry)
+- `metrics_georeg_7b_kaggle.json` (PARTIAL — see [v6 note] for full data)
+- `figs_georeg_7b/fig_margin_vs_lambda.png`
+- Kernel: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg> (v5)

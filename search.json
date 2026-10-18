@@ -316,41 +316,6 @@
     ]
   },
   {
-    "objectID": "v7_email_body.html",
-    "href": "v7_email_body.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
-  },
-  {
-    "objectID": "v7_email_body.html#完整-8-arm-数据",
-    "href": "v7_email_body.html#完整-8-arm-数据",
-    "title": "",
-    "section": "完整 8-arm 数据",
-    "text": "完整 8-arm 数据\n\n[last] baseline=0.0491\n\n\n\nλ\nmargin\nΔ\nlm_ep_last\ninfo_nce_ep_last\n\n\n\n\n0.0\n0.0576\n+0.0085\n2.004\n0.000\n\n\n1.0\n0.0777\n+0.0286\n2.041\n0.957\n\n\n2.0\n0.0801\n+0.0310\n2.060\n0.938\n\n\n5.0\n0.0814\n+0.0324\n2.078\n0.923\n\n\n\nbest λ=5.0 margin=0.0814 Δ=+0.0324 FAIL\n\n\n[mean] baseline=0.0699\n\n\n\nλ\nmargin\nΔ\nlm_ep_last\ninfo_nce_ep_last\n\n\n\n\n0.0\n0.0714\n+0.0016\n2.006\n0.000\n\n\n1.0\n0.0774\n+0.0075\n2.015\n1.238\n\n\n2.0\n0.0805\n+0.0106\n2.024\n1.213\n\n\n5.0\n0.0826\n+0.0127\n2.062\n1.195\n\n\n\nbest λ=5.0 margin=0.0826 Δ=+0.0127 FAIL"
-  },
-  {
-    "objectID": "v7_email_body.html#跨版本对比-best-δ-last_token",
-    "href": "v7_email_body.html#跨版本对比-best-δ-last_token",
-    "title": "",
-    "section": "跨版本对比 (best Δ, last_token)",
-    "text": "跨版本对比 (best Δ, last_token)\n\n\n\n版本\nbest λ\nmargin\nΔ\nH-4’\n\n\n\n\n0.5B v3\n1.0\n0.160\n+0.131\nPASS\n\n\n7B v5\n1.0\n0.083\n+0.034\nFAIL\n\n\n7B v6\n5.0\n0.086\n+0.037\nFAIL\n\n\n7B v7\n5.0\n0.081\n+0.032\nFAIL"
-  },
-  {
-    "objectID": "v7_email_body.html#v7-vs-v6",
-    "href": "v7_email_body.html#v7-vs-v6",
-    "title": "",
-    "section": "v7 vs v6",
-    "text": "v7 vs v6\n\nv7 (3 ep + LR 3e-5) 相对 v6 (2 ep + LR 5e-5) 反向 -0.005 (last) / -0.002 (mean)\n3 epoch 可能 overfit; LR 3e-5 可能太低\nv6 的 +0.037 接近此架构上限, 调超参无法跨过 +0.05"
-  },
-  {
-    "objectID": "v7_email_body.html#决策选项",
-    "href": "v7_email_body.html#决策选项",
-    "title": "",
-    "section": "决策选项",
-    "text": "决策选项\n\nA: 接受 7B H-4’ FAIL, 结束 Phase 2 7B 端 (写总结报告)\nB: 改 loss 设计 (hard negative / SupCon / 重加权 margin push)\nC: 扩 paraphrase corpus (50 -&gt; 100 concept)\nD: 换池化 (attention pool / CLS / 多层 concat)\n\nmetrics: metrics_georeg_7b_v7_full.json kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg github: https://github.com/math4mad/Geometry-Of-Meaning gh-pages: https://math4mad.github.io/Geometry-Of-Meaning/"
-  },
-  {
     "objectID": "design_note_7b_georeg.html",
     "href": "design_note_7b_georeg.html",
     "title": "",

@@ -1,0 +1,16 @@
+{
+  "id": "math4amd/geometry-meaning-7b-georeg",
+  "title": "Geometry Meaning 7b Georeg",
+  "code_file": "geometry-meaning-7b-georeg.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "model_sources": [
+    "qwen-lm/qwen2.5/transformers/7b-instruct"
+  ],
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

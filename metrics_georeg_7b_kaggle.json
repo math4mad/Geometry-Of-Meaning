@@ -1,0 +1,30 @@
+{
+ "arm": "geometry-meaning-7b-georeg",
+ "model_mount": "/kaggle/input/models/qwen-lm/qwen2.5/transformers/7b-instruct/1",
+ "quant": "4bit",
+ "lambdas": [
+  0.0,
+  0.1,
+  0.5,
+  1.0
+ ],
+ "pools": [
+  "last",
+  "mean"
+ ],
+ "epochs": 2,
+ "lr": 5e-05,
+ "block": 128,
+ "micro_batch": 4,
+ "geo_every": 4,
+ "tau": 0.07,
+ "margin_push_coef": 0.1,
+ "stage": "done",
+ "pos": 0.9445620832840601,
+ "neg": 0.874667206249739,
+ "margin": 0.07884177265460035,
+ "delta": 0.008946895620279283,
+ "elapsed_s": 246.8280200958252,
+ "aborted": false,
+ "verdict": "7B geometric regularization does not help"
+}

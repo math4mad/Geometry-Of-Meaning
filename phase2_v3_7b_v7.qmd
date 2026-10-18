@@ -1,15 +1,14 @@
 ---
-title: "7B v7 — 3 epoch + LR 3e-5"
+title: "7B v7 — 3 epoch + LR 3e-5 (FAIL)"
 ---
 
-# 7B v7: Cosine LR (already) + 3 epochs + λ ∈ {0, 1, 2, 5}
+# 7B v7: 3 epoch + LR 3e-5
 
-## Why v7
+## Motivation
 
-v6 already used cosine LR decay + warmup — that was not the issue. v6 failed for two reasons:
-
-1. **Only 2 epochs** — the model may not have had time to settle into the geometry-preserving regime, especially at low λ.
-2. **LR peak of 5e-5 was too high** for a 4-bit quantised 7B base — adapter updates were noisy, possibly overshooting the geometric basin.
+v6 already used cosine LR decay + warmup — that was not the issue. v6 failed because either:
+- 2 epochs was not enough for the geometric basin to form, **or**
+- LR peak of 5e-5 was too high for 4-bit quantised 7B adapters.
 
 ## v7 Changes (vs v6)
 
@@ -19,24 +18,51 @@ v6 already used cosine LR decay + warmup — that was not the issue. v6 failed f
 | LR peak | 5e-5 | **3e-5** |
 | LR schedule | cosine → 0 | cosine → 0 (unchanged) |
 | Warmup | 50 | 50 (unchanged) |
-| LAMBDAS | {0, 1, 2, 5, 10} | **{0, 1, 2, 5}** (10 dropped, last pool saturates there) |
+| LAMBDAS | {0, 1, 2, 5, 10} | **{0, 1, 2, 5}** |
 | Arm count | 10 | 8 |
-| Time est. | 40 min | ~40 min (3 ep × 1.5× per ep / 10×8 = 1.0) |
+| Time | 40 min | 40 min |
 
-## Predictions
+## Results
 
-- **If 3 epochs helps**: the extra epoch should give the geometric basin more time to form. Expect best Δ on `last` to climb from +0.037 → +0.045 or above.
-- **If LR=3e-5 helps**: lower peak reduces noise. Expect InfoNCE to descend more smoothly.
-- **If neither helps**: 7B geometric regularization is genuinely capped near +0.04 at this corpus size; we may need a larger paraphrase corpus, a different auxiliary loss, or a different hidden-state pool (e.g. attention-pooled).
+| Pool | baseline | λ=0.0 | λ=1.0 | λ=2.0 | λ=5.0 | best Δ | H-4' |
+|---|---|---|---|---|---|---|---|
+| **last** | 0.049 | 0.058 | 0.078 | 0.080 | **0.081** | **+0.032** (λ=5) | FAIL |
+| **mean** | 0.070 | 0.071 | 0.077 | 0.081 | **0.083** | **+0.013** (λ=5) | FAIL |
 
-## Status
+![v7 fig](../figs_georeg_7b/fig_margin_vs_lambda_v7.png)
 
-- Kernel: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg> (v7)
-- Status: *running* (started at 2026-10-18 ~14:00 CST)
-- Expected: 2026-10-18 ~14:40 CST
+## Cross-Version Comparison (best Δ, last_token)
 
-## Artifacts (will appear after kernel completes)
+| Version | best λ | margin | Δ | H-4' | Notes |
+|---|---|---|---|---|---|
+| 0.5B v3 | 1.0 | 0.160 | +0.131 | **PASS** | 2 ep, LR 1e-4 |
+| 7B v5 | 1.0 | 0.083 | +0.034 | FAIL | 2 ep, LR 5e-5 |
+| 7B v6 | 5.0 | 0.086 | +0.037 | FAIL | 2 ep, LR 5e-5 |
+| **7B v7** | 5.0 | 0.081 | **+0.032** | FAIL | **3 ep, LR 3e-5** (regressed) |
 
-- `geometry-meaning-7b-georeg-v7.py`
-- `metrics_georeg_7b_v7_full.json`
+## v7 vs v6 Diagnosis
+
+v7 (3 ep + LR 3e-5) regressed by **-0.005 (last) / -0.002 (mean)** relative to v6. Likely reasons:
+
+1. **3 epochs overfits** the LM objective and the geometric task is forgotten
+2. **LR 3e-5 too low** to learn the geometric task — InfoNCE descends more slowly
+3. **v6's +0.037 is at the ceiling** for this architecture; hyper-parameter tuning cannot push past +0.05
+
+## Phase 2 7B Verdict
+
+**H-4' FAIL** — at 7B scale, geometric regularization with cross-sentence InfoNCE + margin push has reached the ceiling of marginal improvement (~+0.03 in best Δ, threshold +0.05). The trend is real and consistent (λ↑ margin↑, last > mean), but the *magnitude* is too small.
+
+## Next-step options (decision required)
+
+- **A**: Accept 7B H-4' FAIL — close Phase 2 7B side, write summary report
+- **B**: Try a different loss design — hard negative mining, SupCon with explicit margin, or reweight the margin-push coefficient
+- **C**: Expand paraphrase corpus (50 → 100 concepts) to give the geometric loss more signal
+- **D**: Change pooling strategy — attention-pooled, CLS token, or last-3-token average
+
+## Artifacts
+
+- `geometry-meaning-7b-georeg-v7.py` (Kaggle kernel source)
+- `metrics_georeg_7b_v7_full.json` (full all_results)
 - `figs_georeg_7b/fig_margin_vs_lambda_v7.png`
+- `phase2_v3_7b_v7_results.md` (full data tables)
+- Kernel: <https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg> (v7)

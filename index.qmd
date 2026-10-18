@@ -43,7 +43,7 @@ H-4 is **PASS** when $M(\text{trained}) - M(\text{baseline}) \geq 0.05$.
 | **v4** 7B baseline + 3 arms | Qwen2.5-7B + QLoRA | (killed by OOM) |
 | **v5** 7B 4 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.034, λ=1) |
 | **v6** 7B 5 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.037, λ=5 last) |
-| **v7** 7B 3 ep + LR 3e-5 | Qwen2.5-7B + QLoRA | pending |
+| **v7** 7B 3 ep + LR 3e-5 | Qwen2.5-7B + QLoRA | H-4-prime FAIL (Delta=+0.032) |
 
 ## Source
 

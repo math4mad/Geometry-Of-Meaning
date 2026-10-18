@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7B v7 — 3 epoch + LR 3e-5 – Geometry of Meaning</title>
+<title>7B v7 — 3 epoch + LR 3e-5 (FAIL) – Geometry of Meaning</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./phase2_v3_7b_v7.html">7B v7 — 3 epoch + LR 3e-5</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./phase2_v3_7b_v7.html">7B v7 — 3 epoch + LR 3e-5 (FAIL)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -187,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phase2_v3_7b_v7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">7B v7 — 3 epoch + LR 3e-5</span></a>
+ <span class="menu-text">7B v7 — 3 epoch + LR 3e-5 (FAIL)</span></a>
   </div>
 </li>
     </ul>
@@ -200,13 +200,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#b-v7-cosine-lr-already-3-epochs-λ-0-1-2-5" id="toc-b-v7-cosine-lr-already-3-epochs-λ-0-1-2-5" class="nav-link active" data-scroll-target="#b-v7-cosine-lr-already-3-epochs-λ-0-1-2-5">7B v7: Cosine LR (already) + 3 epochs + λ ∈ {0, 1, 2, 5}</a>
+  <li><a href="#b-v7-3-epoch-lr-3e-5" id="toc-b-v7-3-epoch-lr-3e-5" class="nav-link active" data-scroll-target="#b-v7-3-epoch-lr-3e-5">7B v7: 3 epoch + LR 3e-5</a>
   <ul class="collapse">
-  <li><a href="#why-v7" id="toc-why-v7" class="nav-link" data-scroll-target="#why-v7">Why v7</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
   <li><a href="#v7-changes-vs-v6" id="toc-v7-changes-vs-v6" class="nav-link" data-scroll-target="#v7-changes-vs-v6">v7 Changes (vs v6)</a></li>
-  <li><a href="#predictions" id="toc-predictions" class="nav-link" data-scroll-target="#predictions">Predictions</a></li>
-  <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status">Status</a></li>
-  <li><a href="#artifacts-will-appear-after-kernel-completes" id="toc-artifacts-will-appear-after-kernel-completes" class="nav-link" data-scroll-target="#artifacts-will-appear-after-kernel-completes">Artifacts (will appear after kernel completes)</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#cross-version-comparison-best-δ-last_token" id="toc-cross-version-comparison-best-δ-last_token" class="nav-link" data-scroll-target="#cross-version-comparison-best-δ-last_token">Cross-Version Comparison (best Δ, last_token)</a></li>
+  <li><a href="#v7-vs-v6-diagnosis" id="toc-v7-vs-v6-diagnosis" class="nav-link" data-scroll-target="#v7-vs-v6-diagnosis">v7 vs v6 Diagnosis</a></li>
+  <li><a href="#phase-2-7b-verdict" id="toc-phase-2-7b-verdict" class="nav-link" data-scroll-target="#phase-2-7b-verdict">Phase 2 7B Verdict</a></li>
+  <li><a href="#next-step-options-decision-required" id="toc-next-step-options-decision-required" class="nav-link" data-scroll-target="#next-step-options-decision-required">Next-step options (decision required)</a></li>
+  <li><a href="#artifacts" id="toc-artifacts" class="nav-link" data-scroll-target="#artifacts">Artifacts</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -216,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">7B v7 — 3 epoch + LR 3e-5</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">7B v7 — 3 epoch + LR 3e-5 (FAIL)</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -233,24 +236,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="b-v7-cosine-lr-already-3-epochs-λ-0-1-2-5" class="level1">
-<h1>7B v7: Cosine LR (already) + 3 epochs + λ ∈ {0, 1, 2, 5}</h1>
-<section id="why-v7" class="level2">
-<h2 class="anchored" data-anchor-id="why-v7">Why v7</h2>
-<p>v6 already used cosine LR decay + warmup — that was not the issue. v6 failed for two reasons:</p>
-<ol type="1">
-<li><strong>Only 2 epochs</strong> — the model may not have had time to settle into the geometry-preserving regime, especially at low λ.</li>
-<li><strong>LR peak of 5e-5 was too high</strong> for a 4-bit quantised 7B base — adapter updates were noisy, possibly overshooting the geometric basin.</li>
-</ol>
+<section id="b-v7-3-epoch-lr-3e-5" class="level1">
+<h1>7B v7: 3 epoch + LR 3e-5</h1>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>v6 already used cosine LR decay + warmup — that was not the issue. v6 failed because either: - 2 epochs was not enough for the geometric basin to form, <strong>or</strong> - LR peak of 5e-5 was too high for 4-bit quantised 7B adapters.</p>
 </section>
 <section id="v7-changes-vs-v6" class="level2">
 <h2 class="anchored" data-anchor-id="v7-changes-vs-v6">v7 Changes (vs v6)</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -282,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>LAMBDAS</td>
 <td>{0, 1, 2, 5, 10}</td>
-<td><strong>{0, 1, 2, 5}</strong> (10 dropped, last pool saturates there)</td>
+<td><strong>{0, 1, 2, 5}</strong></td>
 </tr>
 <tr class="even">
 <td>Arm count</td>
@@ -290,35 +284,155 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>8</td>
 </tr>
 <tr class="odd">
-<td>Time est.</td>
+<td>Time</td>
 <td>40 min</td>
-<td>~40 min (3 ep × 1.5× per ep / 10×8 = 1.0)</td>
+<td>40 min</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="predictions" class="level2">
-<h2 class="anchored" data-anchor-id="predictions">Predictions</h2>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pool</th>
+<th>baseline</th>
+<th>λ=0.0</th>
+<th>λ=1.0</th>
+<th>λ=2.0</th>
+<th>λ=5.0</th>
+<th>best Δ</th>
+<th>H-4’</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>last</strong></td>
+<td>0.049</td>
+<td>0.058</td>
+<td>0.078</td>
+<td>0.080</td>
+<td><strong>0.081</strong></td>
+<td><strong>+0.032</strong> (λ=5)</td>
+<td>FAIL</td>
+</tr>
+<tr class="even">
+<td><strong>mean</strong></td>
+<td>0.070</td>
+<td>0.071</td>
+<td>0.077</td>
+<td>0.081</td>
+<td><strong>0.083</strong></td>
+<td><strong>+0.013</strong> (λ=5)</td>
+<td>FAIL</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs_georeg_7b/fig_margin_vs_lambda_v7.png" class="img-fluid figure-img"></p>
+<figcaption>v7 fig</figcaption>
+</figure>
+</div>
+</section>
+<section id="cross-version-comparison-best-δ-last_token" class="level2">
+<h2 class="anchored" data-anchor-id="cross-version-comparison-best-δ-last_token">Cross-Version Comparison (best Δ, last_token)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>best λ</th>
+<th>margin</th>
+<th>Δ</th>
+<th>H-4’</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.5B v3</td>
+<td>1.0</td>
+<td>0.160</td>
+<td>+0.131</td>
+<td><strong>PASS</strong></td>
+<td>2 ep, LR 1e-4</td>
+</tr>
+<tr class="even">
+<td>7B v5</td>
+<td>1.0</td>
+<td>0.083</td>
+<td>+0.034</td>
+<td>FAIL</td>
+<td>2 ep, LR 5e-5</td>
+</tr>
+<tr class="odd">
+<td>7B v6</td>
+<td>5.0</td>
+<td>0.086</td>
+<td>+0.037</td>
+<td>FAIL</td>
+<td>2 ep, LR 5e-5</td>
+</tr>
+<tr class="even">
+<td><strong>7B v7</strong></td>
+<td>5.0</td>
+<td>0.081</td>
+<td><strong>+0.032</strong></td>
+<td>FAIL</td>
+<td><strong>3 ep, LR 3e-5</strong> (regressed)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="v7-vs-v6-diagnosis" class="level2">
+<h2 class="anchored" data-anchor-id="v7-vs-v6-diagnosis">v7 vs v6 Diagnosis</h2>
+<p>v7 (3 ep + LR 3e-5) regressed by <strong>-0.005 (last) / -0.002 (mean)</strong> relative to v6. Likely reasons:</p>
+<ol type="1">
+<li><strong>3 epochs overfits</strong> the LM objective and the geometric task is forgotten</li>
+<li><strong>LR 3e-5 too low</strong> to learn the geometric task — InfoNCE descends more slowly</li>
+<li><strong>v6’s +0.037 is at the ceiling</strong> for this architecture; hyper-parameter tuning cannot push past +0.05</li>
+</ol>
+</section>
+<section id="phase-2-7b-verdict" class="level2">
+<h2 class="anchored" data-anchor-id="phase-2-7b-verdict">Phase 2 7B Verdict</h2>
+<p><strong>H-4’ FAIL</strong> — at 7B scale, geometric regularization with cross-sentence InfoNCE + margin push has reached the ceiling of marginal improvement (~+0.03 in best Δ, threshold +0.05). The trend is real and consistent (λ↑ margin↑, last &gt; mean), but the <em>magnitude</em> is too small.</p>
+</section>
+<section id="next-step-options-decision-required" class="level2">
+<h2 class="anchored" data-anchor-id="next-step-options-decision-required">Next-step options (decision required)</h2>
 <ul>
-<li><strong>If 3 epochs helps</strong>: the extra epoch should give the geometric basin more time to form. Expect best Δ on <code>last</code> to climb from +0.037 → +0.045 or above.</li>
-<li><strong>If LR=3e-5 helps</strong>: lower peak reduces noise. Expect InfoNCE to descend more smoothly.</li>
-<li><strong>If neither helps</strong>: 7B geometric regularization is genuinely capped near +0.04 at this corpus size; we may need a larger paraphrase corpus, a different auxiliary loss, or a different hidden-state pool (e.g.&nbsp;attention-pooled).</li>
+<li><strong>A</strong>: Accept 7B H-4’ FAIL — close Phase 2 7B side, write summary report</li>
+<li><strong>B</strong>: Try a different loss design — hard negative mining, SupCon with explicit margin, or reweight the margin-push coefficient</li>
+<li><strong>C</strong>: Expand paraphrase corpus (50 → 100 concepts) to give the geometric loss more signal</li>
+<li><strong>D</strong>: Change pooling strategy — attention-pooled, CLS token, or last-3-token average</li>
 </ul>
 </section>
-<section id="status" class="level2">
-<h2 class="anchored" data-anchor-id="status">Status</h2>
+<section id="artifacts" class="level2">
+<h2 class="anchored" data-anchor-id="artifacts">Artifacts</h2>
 <ul>
-<li>Kernel: <a href="https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg" class="uri">https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg</a> (v7)</li>
-<li>Status: <em>running</em> (started at 2026-10-18 ~14:00 CST)</li>
-<li>Expected: 2026-10-18 ~14:40 CST</li>
-</ul>
-</section>
-<section id="artifacts-will-appear-after-kernel-completes" class="level2">
-<h2 class="anchored" data-anchor-id="artifacts-will-appear-after-kernel-completes">Artifacts (will appear after kernel completes)</h2>
-<ul>
-<li><code>geometry-meaning-7b-georeg-v7.py</code></li>
-<li><code>metrics_georeg_7b_v7_full.json</code></li>
+<li><code>geometry-meaning-7b-georeg-v7.py</code> (Kaggle kernel source)</li>
+<li><code>metrics_georeg_7b_v7_full.json</code> (full all_results)</li>
 <li><code>figs_georeg_7b/fig_margin_vs_lambda_v7.png</code></li>
+<li><code>phase2_v3_7b_v7_results.md</code> (full data tables)</li>
+<li>Kernel: <a href="https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg" class="uri">https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg</a> (v7)</li>
 </ul>
 
 
@@ -780,47 +894,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "7B v7 — 3 epoch + LR 3e-5"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "7B v7 — 3 epoch + LR 3e-5 (FAIL)"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># 7B v7: Cosine LR (already) + 3 epochs + λ ∈ {0, 1, 2, 5}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># 7B v7: 3 epoch + LR 3e-5</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why v7</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Motivation</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>v6 already used cosine LR decay + warmup — that was not the issue. v6 failed for two reasons:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Only 2 epochs** — the model may not have had time to settle into the geometry-preserving regime, especially at low λ.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**LR peak of 5e-5 was too high** for a 4-bit quantised 7B base — adapter updates were noisy, possibly overshooting the geometric basin.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## v7 Changes (vs v6)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> v6 <span class="pp">|</span> v7 <span class="pp">|</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Epochs <span class="pp">|</span> 2 <span class="pp">|</span> **3** <span class="pp">|</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LR peak <span class="pp">|</span> 5e-5 <span class="pp">|</span> **3e-5** <span class="pp">|</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LR schedule <span class="pp">|</span> cosine → 0 <span class="pp">|</span> cosine → 0 (unchanged) <span class="pp">|</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Warmup <span class="pp">|</span> 50 <span class="pp">|</span> 50 (unchanged) <span class="pp">|</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LAMBDAS <span class="pp">|</span> {0, 1, 2, 5, 10} <span class="pp">|</span> **{0, 1, 2, 5}** (10 dropped, last pool saturates there) <span class="pp">|</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Arm count <span class="pp">|</span> 10 <span class="pp">|</span> 8 <span class="pp">|</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time est. <span class="pp">|</span> 40 min <span class="pp">|</span> ~40 min (3 ep × 1.5× per ep / 10×8 = 1.0) <span class="pp">|</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Predictions</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**If 3 epochs helps**: the extra epoch should give the geometric basin more time to form. Expect best Δ on <span class="in">`last`</span> to climb from +0.037 → +0.045 or above.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**If LR=3e-5 helps**: lower peak reduces noise. Expect InfoNCE to descend more smoothly.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**If neither helps**: 7B geometric regularization is genuinely capped near +0.04 at this corpus size; we may need a larger paraphrase corpus, a different auxiliary loss, or a different hidden-state pool (e.g. attention-pooled).</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>v6 already used cosine LR decay + warmup — that was not the issue. v6 failed because either:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2 epochs was not enough for the geometric basin to form, **or**</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>LR peak of 5e-5 was too high for 4-bit quantised 7B adapters.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## v7 Changes (vs v6)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> v6 <span class="pp">|</span> v7 <span class="pp">|</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Epochs <span class="pp">|</span> 2 <span class="pp">|</span> **3** <span class="pp">|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LR peak <span class="pp">|</span> 5e-5 <span class="pp">|</span> **3e-5** <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LR schedule <span class="pp">|</span> cosine → 0 <span class="pp">|</span> cosine → 0 (unchanged) <span class="pp">|</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Warmup <span class="pp">|</span> 50 <span class="pp">|</span> 50 (unchanged) <span class="pp">|</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LAMBDAS <span class="pp">|</span> {0, 1, 2, 5, 10} <span class="pp">|</span> **{0, 1, 2, 5}** <span class="pp">|</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Arm count <span class="pp">|</span> 10 <span class="pp">|</span> 8 <span class="pp">|</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time <span class="pp">|</span> 40 min <span class="pp">|</span> 40 min <span class="pp">|</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Pool <span class="pp">|</span> baseline <span class="pp">|</span> λ=0.0 <span class="pp">|</span> λ=1.0 <span class="pp">|</span> λ=2.0 <span class="pp">|</span> λ=5.0 <span class="pp">|</span> best Δ <span class="pp">|</span> H-4' <span class="pp">|</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|---|---|---|</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **last** | 0.049 | 0.058 | 0.078 | 0.080 | **0.081** | **+0.032** (λ=5) <span class="pp">|</span> FAIL <span class="pp">|</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **mean** | 0.070 | 0.071 | 0.077 | 0.081 | **0.083** | **+0.013** (λ=5) <span class="pp">|</span> FAIL <span class="pp">|</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Status</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="al">![v7 fig](../figs_georeg_7b/fig_margin_vs_lambda_v7.png)</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kernel: <span class="ot">&lt;https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg&gt;</span> (v7)</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Status: *running* (started at 2026-10-18 ~14:00 CST)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expected: 2026-10-18 ~14:40 CST</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Artifacts (will appear after kernel completes)</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`geometry-meaning-7b-georeg-v7.py`</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`metrics_georeg_7b_v7_full.json`</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`figs_georeg_7b/fig_margin_vs_lambda_v7.png`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cross-Version Comparison (best Δ, last_token)</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Version <span class="pp">|</span> best λ <span class="pp">|</span> margin <span class="pp">|</span> Δ <span class="pp">|</span> H-4' <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|---|</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0.5B v3 <span class="pp">|</span> 1.0 <span class="pp">|</span> 0.160 <span class="pp">|</span> +0.131 <span class="pp">|</span> **PASS** <span class="pp">|</span> 2 ep, LR 1e-4 <span class="pp">|</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7B v5 <span class="pp">|</span> 1.0 <span class="pp">|</span> 0.083 <span class="pp">|</span> +0.034 <span class="pp">|</span> FAIL <span class="pp">|</span> 2 ep, LR 5e-5 <span class="pp">|</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7B v6 <span class="pp">|</span> 5.0 <span class="pp">|</span> 0.086 <span class="pp">|</span> +0.037 <span class="pp">|</span> FAIL <span class="pp">|</span> 2 ep, LR 5e-5 <span class="pp">|</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **7B v7** | 5.0 | 0.081 | **+0.032** | FAIL | **3 ep, LR 3e-5** (regressed) <span class="pp">|</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## v7 vs v6 Diagnosis</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>v7 (3 ep + LR 3e-5) regressed by **-0.005 (last) / -0.002 (mean)** relative to v6. Likely reasons:</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**3 epochs overfits** the LM objective and the geometric task is forgotten</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**LR 3e-5 too low** to learn the geometric task — InfoNCE descends more slowly</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**v6's +0.037 is at the ceiling** for this architecture; hyper-parameter tuning cannot push past +0.05</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Phase 2 7B Verdict</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>**H-4' FAIL** — at 7B scale, geometric regularization with cross-sentence InfoNCE + margin push has reached the ceiling of marginal improvement (~+0.03 in best Δ, threshold +0.05). The trend is real and consistent (λ↑ margin↑, last &gt; mean), but the *magnitude* is too small.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next-step options (decision required)</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A**: Accept 7B H-4' FAIL — close Phase 2 7B side, write summary report</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**B**: Try a different loss design — hard negative mining, SupCon with explicit margin, or reweight the margin-push coefficient</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**C**: Expand paraphrase corpus (50 → 100 concepts) to give the geometric loss more signal</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**D**: Change pooling strategy — attention-pooled, CLS token, or last-3-token average</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## Artifacts</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`geometry-meaning-7b-georeg-v7.py`</span> (Kaggle kernel source)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`metrics_georeg_7b_v7_full.json`</span> (full all_results)</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`figs_georeg_7b/fig_margin_vs_lambda_v7.png`</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`phase2_v3_7b_v7_results.md`</span> (full data tables)</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kernel: <span class="ot">&lt;https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg&gt;</span> (v7)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

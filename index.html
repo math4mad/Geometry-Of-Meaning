@@ -218,7 +218,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phase2_v3_7b_v7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7B v7 — 3 epoch + LR 3e-5</span></a>
+ <span class="menu-text">7B v7 — 3 epoch + LR 3e-5 (FAIL)</span></a>
   </div>
 </li>
     </ul>
@@ -327,7 +327,7 @@ M = \frac{1}{N_c}\sum_c \frac{1}{n_c^2}\sum_{i,j} \cos(h_{c,i}, h_{c,j}) - \frac
 <tr class="odd">
 <td><strong>v7</strong> 7B 3 ep + LR 3e-5</td>
 <td>Qwen2.5-7B + QLoRA</td>
-<td>pending</td>
+<td>H-4-prime FAIL (Delta=+0.032)</td>
 </tr>
 </tbody>
 </table>
@@ -842,7 +842,7 @@ M = \frac{1}{N_c}\sum_c \frac{1}{n_c^2}\sum_{i,j} \cos(h_{c,i}, h_{c,j}) - \frac
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v4** 7B baseline + 3 arms <span class="pp">|</span> Qwen2.5-7B + QLoRA <span class="pp">|</span> (killed by OOM) <span class="pp">|</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v5** 7B 4 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.034, λ=1) <span class="pp">|</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v6** 7B 5 λ × 2 pool | Qwen2.5-7B + QLoRA | H-4' **FAIL** (Δ=+0.037, λ=5 last) <span class="pp">|</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v7** 7B 3 ep + LR 3e-5 <span class="pp">|</span> Qwen2.5-7B + QLoRA <span class="pp">|</span> pending <span class="pp">|</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **v7** 7B 3 ep + LR 3e-5 <span class="pp">|</span> Qwen2.5-7B + QLoRA <span class="pp">|</span> H-4-prime FAIL (Delta=+0.032) <span class="pp">|</span></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source</span></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>

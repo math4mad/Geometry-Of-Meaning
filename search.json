@@ -222,32 +222,60 @@
     "text": "math4mad\nAI collaboration: CodeBuddy IDE + qwen"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Geometry of Meaning",
+    "objectID": "design_note_7b_georeg.html",
+    "href": "design_note_7b_georeg.html",
+    "title": "",
     "section": "",
-    "text": "Phase 2 explores whether cross-sentence geometric regularization — pulling together hidden states of paraphrases belonging to the same concept while pushing apart different concepts — can measurably improve the concept-grouped margin in a language model’s last-token / mean-pool representation space.\n\n\nFor a paraphrase corpus where every concept \\(c\\) has \\(n_c\\) paraphrases \\(\\{s_{c,1}, \\ldots, s_{c,n_c}\\}\\), a small geometric loss\n\\[\n\\mathcal{L}_{\\text{geo}} = \\sum_c \\sum_{i,j \\in \\text{pos}(c)} \\log \\frac{\\exp(\\text{sim}(h_i, h_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(h_i, h_k)/\\tau)}\n\\]\nadded to the standard LM loss should make the model’s hidden states of paraphrases cluster by concept.\nThe primary metric is concept-grouped margin:\n\\[\nM = \\frac{1}{N_c}\\sum_c \\frac{1}{n_c^2}\\sum_{i,j} \\cos(h_{c,i}, h_{c,j}) - \\frac{1}{N_c(N_c-1)}\\sum_{c\\neq c'}\\frac{1}{n_c n_{c'}}\\sum_{i,j}\\cos(h_{c,i}, h_{c',j})\n\\]\nH-4 is PASS when \\(M(\\text{trained}) - M(\\text{baseline}) \\geq 0.05\\).\n\n\n\n\n\n\n\n\n\n\n\nStage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)\n\n\n\n\n\n\n\nGitHub: https://github.com/math4mad/Geometry-Of-Meaning\nKaggle kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg"
+    "text": "Code"
   },
   {
-    "objectID": "index.html#hypothesis-h-4",
-    "href": "index.html#hypothesis-h-4",
-    "title": "Geometry of Meaning",
-    "section": "",
-    "text": "For a paraphrase corpus where every concept \\(c\\) has \\(n_c\\) paraphrases \\(\\{s_{c,1}, \\ldots, s_{c,n_c}\\}\\), a small geometric loss\n\\[\n\\mathcal{L}_{\\text{geo}} = \\sum_c \\sum_{i,j \\in \\text{pos}(c)} \\log \\frac{\\exp(\\text{sim}(h_i, h_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(h_i, h_k)/\\tau)}\n\\]\nadded to the standard LM loss should make the model’s hidden states of paraphrases cluster by concept.\nThe primary metric is concept-grouped margin:\n\\[\nM = \\frac{1}{N_c}\\sum_c \\frac{1}{n_c^2}\\sum_{i,j} \\cos(h_{c,i}, h_{c,j}) - \\frac{1}{N_c(N_c-1)}\\sum_{c\\neq c'}\\frac{1}{n_c n_{c'}}\\sum_{i,j}\\cos(h_{c,i}, h_{c',j})\n\\]\nH-4 is PASS when \\(M(\\text{trained}) - M(\\text{baseline}) \\geq 0.05\\)."
+    "objectID": "design_note_7b_georeg.html#背景",
+    "href": "design_note_7b_georeg.html#背景",
+    "title": "",
+    "section": "0. 背景",
+    "text": "0. 背景\nPhase 1 已用 Qwen2.5-{0.5B, 7B}-Instruct 提取 50 概念 × 4 变体 = 200 改写语料的内部表征， 发现 7B 在 last_token 池上比 0.5B 出现更明显的概念内聚性（参 0.5B vs 7B 报告）。\nPhase 2 目标：验证”在训练时显式加入几何正则（跨句配对 InfoNCE）能否进一步提升同概念内聚 / 异概念分离”。\nide-lola 的关键建议（Phase 1 末轮）： &gt; “在训练或微调阶段, 显式加入对比损失；选 mean_pool；保留 last_token 池做对比”"
   },
   {
-    "objectID": "index.html#roadmap",
-    "href": "index.html#roadmap",
-    "title": "Geometry of Meaning",
-    "section": "",
-    "text": "Stage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)"
+    "objectID": "design_note_7b_georeg.html#b-poc-复盘决定-7b-设计的依据",
+    "href": "design_note_7b_georeg.html#b-poc-复盘决定-7b-设计的依据",
+    "title": "",
+    "section": "1. 0.5B PoC 复盘（决定 7B 设计的依据）",
+    "text": "1. 0.5B PoC 复盘（决定 7B 设计的依据）\n\n1.1 实验矩阵\n\n模型: Qwen2.5-0.5B-Instruct + LoRA(r=16, α=32, target=[q,k,v,o])\n训练: 2 epoch × stream block (128 tokens) + 每 4 步插 1 个 micro-batch\nMicro-batch: 6 句 / 4 concept / 2 句重复 → 2 对正样本 + 异概念负样本\n几何损失: cross-sentence InfoNCE, τ=0.07\n设备: Apple MPS, 总耗时 ~3 min\n\n\n\n1.2 失败教训（v1 → v2 → v3）\n\n\n\n\n\n\n\n\n\n版本\n损失设计\n结果\n失败原因\n\n\n\n\nv1\nblock 内 K token 互拉/推开\nH-4 FAIL\n局部一致性代理 ≠ 概念对齐\n\n\nv2\nmicro-batch 完全替代 LM 流\nH-4 FAIL\nLM 分布严重错位, loss 6.85\n\n\nv3\nLM 流 + 周期性 micro-batch InfoNCE\nH-4 PASS\n修正了 1+2\n\n\n\n\n\n1.3 PoC 结果（v3，0.5B）\n\n\n\n\n\n\n\n\n\n\n\n\n\nPool\nbaseline\nλ=0.0\nλ=0.05\nλ=0.2\nλ=1.0\nbest Δ\nH-4 (Δ≥0.05)\n\n\n\n\nlast_token\n0.030\n0.019\n0.025\n0.043\n0.160\n+0.131\nPASS\n\n\nmean_pool\n0.043\n0.037\n0.039\n0.045\n0.104\n+0.061\nPASS\n\n\n\n\nλ 单调正向（last 池尤其严格单调）\nInfoNCE 损失稳定下降（λ=1.0 last: 1.26 → 0.70）\nLM 损失几乎不受影响（λ=1.0 lm=1.79 vs baseline 1.69）\n\n\n\n1.4 关键结论\n\n跨句配对 InfoNCE 是正确代理（block 内 K token 互相不是）\n几何正则能让 last_token 池反超 mean_pool 池（与 Phase 1 G-1 “mean &gt; last” 反转）\nλ 越大 margin 越大（0.5B 端未见饱和）"
   },
   {
-    "objectID": "index.html#source",
-    "href": "index.html#source",
-    "title": "Geometry of Meaning",
-    "section": "",
-    "text": "GitHub: https://github.com/math4mad/Geometry-Of-Meaning\nKaggle kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg"
+    "objectID": "design_note_7b_georeg.html#b-实验设计",
+    "href": "design_note_7b_georeg.html#b-实验设计",
+    "title": "",
+    "section": "2. 7B 实验设计",
+    "text": "2. 7B 实验设计\n\n2.1 目标\nH-4’ (7B 版)：几何正则使 7B 的概念 margin 在至少一个池化方式上提升 ≥ 0.05。\n\n\n2.2 模型\n\nBase: Qwen2.5-7B-Instruct（已用 4bit 量化跑过 Phase 1）\n适配: QLoRA (4bit nf4 + double quant + bf16 compute)\nLoRA 参数: r=16, α=32, target=[q,k,v,o] (跟 0.5B 一致)\n量化: bitsandbytes 4bit（已有 Phase 1 配置验证）\n训练 dtype: bf16（fp16 在 7B 上梯度不稳定，参考 Phase 1 G-3）\n\n\n\n2.3 数据\n\n复用 0.5B 的 corpus_paraphrase.json（50 概念 × 4 变体）\n训练流: 同一 build_stream()，50 概念 200 句\nEval: 同 200 句 + 同 pos/neg 配对（保持口径一致）\n\n\n\n2.4 训练超参\n\n\n\n\n\n\n\n\n\n项\n0.5B v3\n7B v1（设计）\n理由\n\n\n\n\nOptimizer\nAdamW\nAdamW + paged 8bit\n7B 显存省\n\n\nLR\n1e-4\n5e-5\n7B 标准小 1 半\n\n\nWarmup\n0\n50 步\n7B 起步稳\n\n\nEpoch\n2\n2\n同 0.5B\n\n\nBLOCK\n128\n256\n7B 上下文强一倍\n\n\nMICRO_BATCH 句数\n6\n6\n同\n\n\nGEO_EVERY (步)\n4\n4\n同\n\n\n池化\nlast + mean\nlast + mean\n跟 0.5B 对照\n\n\nTAU (InfoNCE 温度)\n0.07\n0.07\n同\n\n\nλ 扫描\n{0, 0.05, 0.2, 1.0}\n{0, 0.1, 0.5, 1.0}\n0.5B 已证 λ↑→ margin↑，7B 加密中间值\n\n\n备援 margin push\n无\n0.1 × ReLU(cos_neg - 0.5)\n7B 端负样本 cosine 较 0.5B 更紧，加 margin 更稳\n\n\n\n\n\n2.5 评估（与 0.5B 完全同口径）\n\n主指标: 跨概念 margin = pos_cosine_mean - neg_cosine_mean (50 concept, 20 sampled neg)\n副指标:\n\nUMAP 2D 可视化（跟 Phase 1 G-2 同一脚本）\n同概念 CKA（取层 14/21/27）\n跨概念 attention rollout（跟 Phase 1 A-1 同一脚本）\n\n判定:\n\nH-4’ PASS: 至少一个池化 + 某 λ 比 baseline 提升 ≥ 0.05\n副产物: 报告「λ=0 vs λ=0.5 vs λ=1.0」三档 UMAP 图\n\n\n\n\n2.6 算力 / 成本\n\n设备: Kaggle T4 × 16GB\n单 arm 估算: 2 epoch × 30 block × ~5 s/step ≈ 5 min（QLoRA + bf16）\n8 arm: ~40 min + 模型加载 5 min ≈ 45 min 总\n比 Phase 1 7B extraction 慢 ~3 倍（因为要训练），但单次 kernel 可容纳\n\n\n\n2.7 输出\n\nmetrics_georeg_7b.json（同 v3 schema）\nfigs_georeg_7b/fig_margin_vs_lambda.png\nfigs_georeg_7b/fig_umap_lambda_sweep.png（λ=0/0.5/1.0 三档对比）\nreport_geometry_of_meaning_7b_georeg.qmd（Phase 2 v2 章节）"
+  },
+  {
+    "objectID": "design_note_7b_georeg.html#风险与缓解",
+    "href": "design_note_7b_georeg.html#风险与缓解",
+    "title": "",
+    "section": "3. 风险与缓解",
+    "text": "3. 风险与缓解\n\n\n\n\n\n\n\n\n风险\n概率\n缓解\n\n\n\n\n7B 上 InfoNCE 损失爆炸（log 溢出）\n中\nτ=0.07 已是稳值；加梯度裁剪 1.0\n\n\n7B 端 λ=1.0 LM 损失反向上升\n中\n监控 lm_loss，若 ep2 &gt; 1.5 × ep1 终止该 arm\n\n\nT4 显存 OOM (QLoRA 4bit + 256 block)\n低\n备援: block 缩到 128 / batch=4 / gradient_checkpointing\n\n\n8 arm 跑完发现 λ=0.5 已经最优\n低\n7B 端 λ 扫描已含 0.1, 0.5, 1.0 三个值\n\n\nneg cosine &gt; 0.5 频繁触发 margin push 让 loss 主导\n中\nmargin push 系数 0.1 而非 1.0；监控"
+  },
+  {
+    "objectID": "design_note_7b_georeg.html#时间线",
+    "href": "design_note_7b_georeg.html#时间线",
+    "title": "",
+    "section": "4. 时间线",
+    "text": "4. 时间线\n\n\n\n\n\n\n\n\n阶段\n任务\n估计\n\n\n\n\nT0\nide-lola 审阅本设计稿\n1-2 天\n\n\nT1\n改写 train_georeg_v3.py → 7B 版（QLoRA + bf16 + 备援 margin）\n0.5 天\n\n\nT2\nKaggle kernel 提交 + 跑（1×T4 45 min）\n1 天\n\n\nT3\n结果分析 + 写 v2 qmd + 推 gh-pages\n0.5 天\n\n\nT4\n总结 + 给 ide-lola 发最终报告\n0.5 天"
+  },
+  {
+    "objectID": "design_note_7b_georeg.html#复现指引",
+    "href": "design_note_7b_georeg.html#复现指引",
+    "title": "",
+    "section": "5. 复现指引",
+    "text": "5. 复现指引\n# 1. 准备 7B QLoRA 依赖\npip install -q transformers peft bitsandbytes accelerate datasets\n\n# 2. 训练 + 评估\npython train_georeg_7b.py 2&gt;&1 | tee /kaggle/working/v3_7b.log\n\n# 3. 看结果\ncat /kaggle/working/metrics_georeg_7b.json\nls /kaggle/working/figs_georeg_7b/"
+  },
+  {
+    "objectID": "design_note_7b_georeg.html#给-ide-lola-的开放问题",
+    "href": "design_note_7b_georeg.html#给-ide-lola-的开放问题",
+    "title": "",
+    "section": "6. 给 ide-lola 的开放问题",
+    "text": "6. 给 ide-lola 的开放问题\n\nmean vs last：0.5B 端 mean 基线高于 last，但几何正则后 last 反超；7B 端是否同向？\nλ 上限：0.5B 端 λ=1.0 仍未饱和（margin 还在升），7B 端要不要扩到 λ=2.0？\n备援 margin push：0.5B 没用上（设计 v3 删了），7B 端是否要保留？\n跨句 batch 选句策略：当前 4 concept × (2 句 + 2 句 + 1 句 + 1 句)，是否改成 (3 句 + 1 句) × 4 concept 提供更多正样本对？\n\n请审阅后回复任意一个微调或确认无误，我即刻起 T1。"
   },
   {
     "objectID": "phase2_v1_05b.html",
@@ -316,95 +344,32 @@
     ]
   },
   {
-    "objectID": "design_note_7b_georeg.html",
-    "href": "design_note_7b_georeg.html",
-    "title": "",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Geometry of Meaning",
     "section": "",
-    "text": "Code"
+    "text": "Phase 2 explores whether cross-sentence geometric regularization — pulling together hidden states of paraphrases belonging to the same concept while pushing apart different concepts — can measurably improve the concept-grouped margin in a language model’s last-token / mean-pool representation space.\n\n\nFor a paraphrase corpus where every concept \\(c\\) has \\(n_c\\) paraphrases \\(\\{s_{c,1}, \\ldots, s_{c,n_c}\\}\\), a small geometric loss\n\\[\n\\mathcal{L}_{\\text{geo}} = \\sum_c \\sum_{i,j \\in \\text{pos}(c)} \\log \\frac{\\exp(\\text{sim}(h_i, h_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(h_i, h_k)/\\tau)}\n\\]\nadded to the standard LM loss should make the model’s hidden states of paraphrases cluster by concept.\nThe primary metric is concept-grouped margin:\n\\[\nM = \\frac{1}{N_c}\\sum_c \\frac{1}{n_c^2}\\sum_{i,j} \\cos(h_{c,i}, h_{c,j}) - \\frac{1}{N_c(N_c-1)}\\sum_{c\\neq c'}\\frac{1}{n_c n_{c'}}\\sum_{i,j}\\cos(h_{c,i}, h_{c',j})\n\\]\nH-4 is PASS when \\(M(\\text{trained}) - M(\\text{baseline}) \\geq 0.05\\).\n\n\n\n\n\n\n\n\n\n\n\nStage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)\n\n\n\n\n\n\n\nGitHub: https://github.com/math4mad/Geometry-Of-Meaning\nKaggle kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg"
   },
   {
-    "objectID": "design_note_7b_georeg.html#背景",
-    "href": "design_note_7b_georeg.html#背景",
-    "title": "",
-    "section": "0. 背景",
-    "text": "0. 背景\nPhase 1 已用 Qwen2.5-{0.5B, 7B}-Instruct 提取 50 概念 × 4 变体 = 200 改写语料的内部表征， 发现 7B 在 last_token 池上比 0.5B 出现更明显的概念内聚性（参 0.5B vs 7B 报告）。\nPhase 2 目标：验证”在训练时显式加入几何正则（跨句配对 InfoNCE）能否进一步提升同概念内聚 / 异概念分离”。\nide-lola 的关键建议（Phase 1 末轮）： &gt; “在训练或微调阶段, 显式加入对比损失；选 mean_pool；保留 last_token 池做对比”"
-  },
-  {
-    "objectID": "design_note_7b_georeg.html#b-poc-复盘决定-7b-设计的依据",
-    "href": "design_note_7b_georeg.html#b-poc-复盘决定-7b-设计的依据",
-    "title": "",
-    "section": "1. 0.5B PoC 复盘（决定 7B 设计的依据）",
-    "text": "1. 0.5B PoC 复盘（决定 7B 设计的依据）\n\n1.1 实验矩阵\n\n模型: Qwen2.5-0.5B-Instruct + LoRA(r=16, α=32, target=[q,k,v,o])\n训练: 2 epoch × stream block (128 tokens) + 每 4 步插 1 个 micro-batch\nMicro-batch: 6 句 / 4 concept / 2 句重复 → 2 对正样本 + 异概念负样本\n几何损失: cross-sentence InfoNCE, τ=0.07\n设备: Apple MPS, 总耗时 ~3 min\n\n\n\n1.2 失败教训（v1 → v2 → v3）\n\n\n\n\n\n\n\n\n\n版本\n损失设计\n结果\n失败原因\n\n\n\n\nv1\nblock 内 K token 互拉/推开\nH-4 FAIL\n局部一致性代理 ≠ 概念对齐\n\n\nv2\nmicro-batch 完全替代 LM 流\nH-4 FAIL\nLM 分布严重错位, loss 6.85\n\n\nv3\nLM 流 + 周期性 micro-batch InfoNCE\nH-4 PASS\n修正了 1+2\n\n\n\n\n\n1.3 PoC 结果（v3，0.5B）\n\n\n\n\n\n\n\n\n\n\n\n\n\nPool\nbaseline\nλ=0.0\nλ=0.05\nλ=0.2\nλ=1.0\nbest Δ\nH-4 (Δ≥0.05)\n\n\n\n\nlast_token\n0.030\n0.019\n0.025\n0.043\n0.160\n+0.131\nPASS\n\n\nmean_pool\n0.043\n0.037\n0.039\n0.045\n0.104\n+0.061\nPASS\n\n\n\n\nλ 单调正向（last 池尤其严格单调）\nInfoNCE 损失稳定下降（λ=1.0 last: 1.26 → 0.70）\nLM 损失几乎不受影响（λ=1.0 lm=1.79 vs baseline 1.69）\n\n\n\n1.4 关键结论\n\n跨句配对 InfoNCE 是正确代理（block 内 K token 互相不是）\n几何正则能让 last_token 池反超 mean_pool 池（与 Phase 1 G-1 “mean &gt; last” 反转）\nλ 越大 margin 越大（0.5B 端未见饱和）"
-  },
-  {
-    "objectID": "design_note_7b_georeg.html#b-实验设计",
-    "href": "design_note_7b_georeg.html#b-实验设计",
-    "title": "",
-    "section": "2. 7B 实验设计",
-    "text": "2. 7B 实验设计\n\n2.1 目标\nH-4’ (7B 版)：几何正则使 7B 的概念 margin 在至少一个池化方式上提升 ≥ 0.05。\n\n\n2.2 模型\n\nBase: Qwen2.5-7B-Instruct（已用 4bit 量化跑过 Phase 1）\n适配: QLoRA (4bit nf4 + double quant + bf16 compute)\nLoRA 参数: r=16, α=32, target=[q,k,v,o] (跟 0.5B 一致)\n量化: bitsandbytes 4bit（已有 Phase 1 配置验证）\n训练 dtype: bf16（fp16 在 7B 上梯度不稳定，参考 Phase 1 G-3）\n\n\n\n2.3 数据\n\n复用 0.5B 的 corpus_paraphrase.json（50 概念 × 4 变体）\n训练流: 同一 build_stream()，50 概念 200 句\nEval: 同 200 句 + 同 pos/neg 配对（保持口径一致）\n\n\n\n2.4 训练超参\n\n\n\n\n\n\n\n\n\n项\n0.5B v3\n7B v1（设计）\n理由\n\n\n\n\nOptimizer\nAdamW\nAdamW + paged 8bit\n7B 显存省\n\n\nLR\n1e-4\n5e-5\n7B 标准小 1 半\n\n\nWarmup\n0\n50 步\n7B 起步稳\n\n\nEpoch\n2\n2\n同 0.5B\n\n\nBLOCK\n128\n256\n7B 上下文强一倍\n\n\nMICRO_BATCH 句数\n6\n6\n同\n\n\nGEO_EVERY (步)\n4\n4\n同\n\n\n池化\nlast + mean\nlast + mean\n跟 0.5B 对照\n\n\nTAU (InfoNCE 温度)\n0.07\n0.07\n同\n\n\nλ 扫描\n{0, 0.05, 0.2, 1.0}\n{0, 0.1, 0.5, 1.0}\n0.5B 已证 λ↑→ margin↑，7B 加密中间值\n\n\n备援 margin push\n无\n0.1 × ReLU(cos_neg - 0.5)\n7B 端负样本 cosine 较 0.5B 更紧，加 margin 更稳\n\n\n\n\n\n2.5 评估（与 0.5B 完全同口径）\n\n主指标: 跨概念 margin = pos_cosine_mean - neg_cosine_mean (50 concept, 20 sampled neg)\n副指标:\n\nUMAP 2D 可视化（跟 Phase 1 G-2 同一脚本）\n同概念 CKA（取层 14/21/27）\n跨概念 attention rollout（跟 Phase 1 A-1 同一脚本）\n\n判定:\n\nH-4’ PASS: 至少一个池化 + 某 λ 比 baseline 提升 ≥ 0.05\n副产物: 报告「λ=0 vs λ=0.5 vs λ=1.0」三档 UMAP 图\n\n\n\n\n2.6 算力 / 成本\n\n设备: Kaggle T4 × 16GB\n单 arm 估算: 2 epoch × 30 block × ~5 s/step ≈ 5 min（QLoRA + bf16）\n8 arm: ~40 min + 模型加载 5 min ≈ 45 min 总\n比 Phase 1 7B extraction 慢 ~3 倍（因为要训练），但单次 kernel 可容纳\n\n\n\n2.7 输出\n\nmetrics_georeg_7b.json（同 v3 schema）\nfigs_georeg_7b/fig_margin_vs_lambda.png\nfigs_georeg_7b/fig_umap_lambda_sweep.png（λ=0/0.5/1.0 三档对比）\nreport_geometry_of_meaning_7b_georeg.qmd（Phase 2 v2 章节）"
-  },
-  {
-    "objectID": "design_note_7b_georeg.html#风险与缓解",
-    "href": "design_note_7b_georeg.html#风险与缓解",
-    "title": "",
-    "section": "3. 风险与缓解",
-    "text": "3. 风险与缓解\n\n\n\n\n\n\n\n\n风险\n概率\n缓解\n\n\n\n\n7B 上 InfoNCE 损失爆炸（log 溢出）\n中\nτ=0.07 已是稳值；加梯度裁剪 1.0\n\n\n7B 端 λ=1.0 LM 损失反向上升\n中\n监控 lm_loss，若 ep2 &gt; 1.5 × ep1 终止该 arm\n\n\nT4 显存 OOM (QLoRA 4bit + 256 block)\n低\n备援: block 缩到 128 / batch=4 / gradient_checkpointing\n\n\n8 arm 跑完发现 λ=0.5 已经最优\n低\n7B 端 λ 扫描已含 0.1, 0.5, 1.0 三个值\n\n\nneg cosine &gt; 0.5 频繁触发 margin push 让 loss 主导\n中\nmargin push 系数 0.1 而非 1.0；监控"
-  },
-  {
-    "objectID": "design_note_7b_georeg.html#时间线",
-    "href": "design_note_7b_georeg.html#时间线",
-    "title": "",
-    "section": "4. 时间线",
-    "text": "4. 时间线\n\n\n\n\n\n\n\n\n阶段\n任务\n估计\n\n\n\n\nT0\nide-lola 审阅本设计稿\n1-2 天\n\n\nT1\n改写 train_georeg_v3.py → 7B 版（QLoRA + bf16 + 备援 margin）\n0.5 天\n\n\nT2\nKaggle kernel 提交 + 跑（1×T4 45 min）\n1 天\n\n\nT3\n结果分析 + 写 v2 qmd + 推 gh-pages\n0.5 天\n\n\nT4\n总结 + 给 ide-lola 发最终报告\n0.5 天"
-  },
-  {
-    "objectID": "design_note_7b_georeg.html#复现指引",
-    "href": "design_note_7b_georeg.html#复现指引",
-    "title": "",
-    "section": "5. 复现指引",
-    "text": "5. 复现指引\n# 1. 准备 7B QLoRA 依赖\npip install -q transformers peft bitsandbytes accelerate datasets\n\n# 2. 训练 + 评估\npython train_georeg_7b.py 2&gt;&1 | tee /kaggle/working/v3_7b.log\n\n# 3. 看结果\ncat /kaggle/working/metrics_georeg_7b.json\nls /kaggle/working/figs_georeg_7b/"
-  },
-  {
-    "objectID": "design_note_7b_georeg.html#给-ide-lola-的开放问题",
-    "href": "design_note_7b_georeg.html#给-ide-lola-的开放问题",
-    "title": "",
-    "section": "6. 给 ide-lola 的开放问题",
-    "text": "6. 给 ide-lola 的开放问题\n\nmean vs last：0.5B 端 mean 基线高于 last，但几何正则后 last 反超；7B 端是否同向？\nλ 上限：0.5B 端 λ=1.0 仍未饱和（margin 还在升），7B 端要不要扩到 λ=2.0？\n备援 margin push：0.5B 没用上（设计 v3 删了），7B 端是否要保留？\n跨句 batch 选句策略：当前 4 concept × (2 句 + 2 句 + 1 句 + 1 句)，是否改成 (3 句 + 1 句) × 4 concept 提供更多正样本对？\n\n请审阅后回复任意一个微调或确认无误，我即刻起 T1。"
-  },
-  {
-    "objectID": "phase2_v3_7b_v7_results.html",
-    "href": "phase2_v3_7b_v7_results.html",
-    "title": "",
+    "objectID": "index.html#hypothesis-h-4",
+    "href": "index.html#hypothesis-h-4",
+    "title": "Geometry of Meaning",
     "section": "",
-    "text": "Code"
+    "text": "For a paraphrase corpus where every concept \\(c\\) has \\(n_c\\) paraphrases \\(\\{s_{c,1}, \\ldots, s_{c,n_c}\\}\\), a small geometric loss\n\\[\n\\mathcal{L}_{\\text{geo}} = \\sum_c \\sum_{i,j \\in \\text{pos}(c)} \\log \\frac{\\exp(\\text{sim}(h_i, h_j)/\\tau)}{\\sum_{k \\neq i} \\exp(\\text{sim}(h_i, h_k)/\\tau)}\n\\]\nadded to the standard LM loss should make the model’s hidden states of paraphrases cluster by concept.\nThe primary metric is concept-grouped margin:\n\\[\nM = \\frac{1}{N_c}\\sum_c \\frac{1}{n_c^2}\\sum_{i,j} \\cos(h_{c,i}, h_{c,j}) - \\frac{1}{N_c(N_c-1)}\\sum_{c\\neq c'}\\frac{1}{n_c n_{c'}}\\sum_{i,j}\\cos(h_{c,i}, h_{c',j})\n\\]\nH-4 is PASS when \\(M(\\text{trained}) - M(\\text{baseline}) \\geq 0.05\\)."
   },
   {
-    "objectID": "phase2_v3_7b_v7_results.html#完整-8-arm-数据",
-    "href": "phase2_v3_7b_v7_results.html#完整-8-arm-数据",
-    "title": "",
-    "section": "完整 8-arm 数据",
-    "text": "完整 8-arm 数据\n\n\n\n\n\n\n\n\n\n\n\n\n\nPool\nbaseline\nλ=0.0\nλ=1.0\nλ=2.0\nλ=5.0\nbest Δ\nH-4’\n\n\n\n\nlast\n0.049\n0.058\n0.078\n0.080\n0.081\n+0.032 (λ=5)\nFAIL\n\n\nmean\n0.070\n0.071\n0.077\n0.081\n0.083\n+0.013 (λ=5)\nFAIL"
+    "objectID": "index.html#roadmap",
+    "href": "index.html#roadmap",
+    "title": "Geometry of Meaning",
+    "section": "",
+    "text": "Stage\nModel\nResult\n\n\n\n\nv1 0.5B block-internal geo loss\nQwen2.5-0.5B + LoRA\nH-4 FAIL (Δ=+0.003)\n\n\nv2 0.5B micro-batch only\nQwen2.5-0.5B + LoRA\nH-4 FAIL (NaN)\n\n\nv3 0.5B LM-stream + InfoNCE\nQwen2.5-0.5B + LoRA\nH-4 PASS (Δ=+0.131, λ=1)\n\n\nv4 7B baseline + 3 arms\nQwen2.5-7B + QLoRA\n(killed by OOM)\n\n\nv5 7B 4 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.034, λ=1)\n\n\nv6 7B 5 λ × 2 pool\nQwen2.5-7B + QLoRA\nH-4’ FAIL (Δ=+0.037, λ=5 last)\n\n\nv7 7B 3 ep + LR 3e-5\nQwen2.5-7B + QLoRA\nH-4-prime FAIL (Delta=+0.032)"
   },
   {
-    "objectID": "phase2_v3_7b_v7_results.html#跨版本对比-best-δ-last_token",
-    "href": "phase2_v3_7b_v7_results.html#跨版本对比-best-δ-last_token",
-    "title": "",
-    "section": "跨版本对比 (best Δ, last_token)",
-    "text": "跨版本对比 (best Δ, last_token)\n\n\n\n\n\n\n\n\n\n\n\n版本\nbest λ\nmargin\nΔ\nH-4’\n备注\n\n\n\n\n0.5B v3\n1.0\n0.160\n+0.131\nPASS\n2 ep, LR 1e-4\n\n\n7B v5\n1.0\n0.083\n+0.034\nFAIL\n2 ep, LR 5e-5\n\n\n7B v6\n5.0\n0.086\n+0.037\nFAIL\n2 ep, LR 5e-5\n\n\n7B v7\n5.0\n0.081\n+0.032\nFAIL\n3 ep, LR 3e-5 (反向)"
-  },
-  {
-    "objectID": "phase2_v3_7b_v7_results.html#v7-vs-v6-诊断",
-    "href": "phase2_v3_7b_v7_results.html#v7-vs-v6-诊断",
-    "title": "",
-    "section": "v7 vs v6 诊断",
-    "text": "v7 vs v6 诊断\nv7 (3 ep + LR 3e-5) 相对 v6 (2 ep + LR 5e-5) 反向 -0.005 (last) / -0.002 (mean)。可能原因：\n\n3 epoch overfit — 训练后期过拟合于 LM 任务, 几何任务被遗忘\nLR 3e-5 太低 — 模型学不动几何任务 (InfoNCE 下降更慢)\nv6 的 +0.037 已接近此架构上限 — 调超参无法跨过 +0.05 阈值\n\n结论: 7B 端 H-4’ 调超参空间已被穷尽。下一步需换损失设计 / 换语料 / 换池化才能尝试突破。"
-  },
-  {
-    "objectID": "phase2_v3_7b_v7_results.html#实验细节",
-    "href": "phase2_v3_7b_v7_results.html#实验细节",
-    "title": "",
-    "section": "实验细节",
-    "text": "实验细节\n\n模型: Qwen2.5-7B-Instruct + QLoRA(r=16, α=32, 4bit nf4, bf16)\n训练: 3 epoch × stream block 128 + 每 4 步 micro-batch 4 句\n优化器: AdamW (betas=0.9, 0.95) + cosine LR 3e-5 → 0 + warmup 50\n几何损失: cross-sentence InfoNCE τ=0.07 + margin push 0.1×ReLU(cos_neg-0.5)\n设备: Kaggle T4 16GB\n产物: metrics_georeg_7b_v7_full.json + figs_georeg_7b/fig_margin_vs_lambda_v7.png\nKernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg (v7)"
+    "objectID": "index.html#source",
+    "href": "index.html#source",
+    "title": "Geometry of Meaning",
+    "section": "",
+    "text": "GitHub: https://github.com/math4mad/Geometry-Of-Meaning\nKaggle kernel: https://www.kaggle.com/code/math4amd/geometry-meaning-7b-georeg"
   },
   {
     "objectID": "phase2_overview.html",

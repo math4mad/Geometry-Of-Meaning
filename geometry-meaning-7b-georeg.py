@@ -48,7 +48,7 @@ all_sents = [(cid, s) for cid in concept_ids for s in concept_to_sents[cid]]
 print(f"corpus loaded: {len(concept_ids)} concepts, {len(all_sents)} sentences", flush=True)
 
 # ---------- 旋钮区 ----------
-LAMBDAS = [0.0, 0.1, 0.5, 1.0]
+LAMBDAS = [0.0, 1.0, 2.0, 5.0, 10.0]  # v6: 扩到 {0, 1, 2, 5, 10} 测试 7B 端是否 λ 饱和
 POOLS = ["last", "mean"]
 EPOCHS = 2
 LR = 5e-5
@@ -74,6 +74,7 @@ HERE = "/kaggle/working"
 FIGS = os.path.join(HERE, "figs_georeg_7b")
 os.makedirs(FIGS, exist_ok=True)
 OUT_METRICS = os.path.join(HERE, "metrics_georeg_7b_kaggle.json")
+OUT_FULL = os.path.join(HERE, "metrics_georeg_7b_v6_full.json")  # v6: 含 all_results 的全量存档 (不被 PARTIAL 覆盖)
 
 dev = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"device: {dev}", flush=True)
@@ -436,6 +437,13 @@ def main():
     }
     with open(OUT_METRICS, "w") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
+    # v6: 额外存全量 (含 all_results) 到 OUT_FULL, 不被 fl() 覆盖
+    try:
+        with open(OUT_FULL, "w") as f:
+            json.dump(out, f, ensure_ascii=False, indent=1)
+        print(f"FULL metrics saved: {OUT_FULL}", flush=True)
+    except Exception as e:
+        print(f"WARNING: full save failed: {e}", flush=True)
 
     print(f"\n{'='*60}\nDONE — {OUT_METRICS}")
     print(f"  H-4' verdict: {out['verdict']}")

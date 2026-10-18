@@ -33,7 +33,7 @@ MODEL = "Qwen/Qwen2.5-7B-Instruct"
 FIGS = os.path.join(HERE, "figs_georeg_7b")
 os.makedirs(FIGS, exist_ok=True)
 
-LAMBDAS = [0.0, 0.1, 0.5, 1.0]
+LAMBDAS = [0.0, 1.0, 2.0, 5.0, 10.0]  # v6: 扩到 {0, 1, 2, 5, 10} 测试 7B 端是否 λ 饱和
 POOLS = ["last", "mean"]
 EPOCHS = 2
 LR = 5e-5
